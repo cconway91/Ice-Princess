@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		3718D98022178996001398A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D97F22178996001398A1 /* AppDelegate.swift */; };
-		3718D98222178996001398A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D98122178996001398A1 /* ViewController.swift */; };
 		3718D98522178996001398A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3718D98322178996001398A1 /* Main.storyboard */; };
 		3718D98722178997001398A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3718D98622178997001398A1 /* Assets.xcassets */; };
 		3718D98A22178997001398A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3718D98822178997001398A1 /* LaunchScreen.storyboard */; };
+		3718D9972217CADC001398A1 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D9962217CADC001398A1 /* Classes.swift */; };
+		3718D9992217CC3E001398A1 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9982217CC3E001398A1 /* Billabong.ttf */; };
+		3718D99B2217CE37001398A1 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D99A2217CE37001398A1 /* LaunchScreenViewController.swift */; };
+		3718D99D2217D032001398A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D99C2217D032001398A1 /* MainViewController.swift */; };
+		3718D99F2217D1EF001398A1 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D99E2217D1EF001398A1 /* CallViewController.swift */; };
+		3718D9A42217D4F3001398A1 /* Introduction.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A32217D4F3001398A1 /* Introduction.mp4 */; };
+		3718D9A62217D513001398A1 /* ClickOff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A52217D513001398A1 /* ClickOff.mp3 */; };
+		3718D9A82217D51F001398A1 /* ClickOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A72217D51F001398A1 /* ClickOn.mp3 */; };
+		3718D9AA2217D52B001398A1 /* EndCall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A92217D52B001398A1 /* EndCall.mp3 */; };
+		3718D9AC2217D539001398A1 /* OutboundRingTone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9AB2217D539001398A1 /* OutboundRingTone.mp3 */; };
+		3718D9AE2217D547001398A1 /* StartCall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9AD2217D547001398A1 /* StartCall.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3718D97C22178996001398A1 /* Ice Princess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ice Princess.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3718D97F22178996001398A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3718D98122178996001398A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3718D98422178996001398A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3718D98622178997001398A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3718D98922178997001398A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3718D98B22178997001398A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3718D9962217CADC001398A1 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		3718D9982217CC3E001398A1 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
+		3718D99A2217CE37001398A1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		3718D99C2217D032001398A1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3718D99E2217D1EF001398A1 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
+		3718D9A32217D4F3001398A1 /* Introduction.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Introduction.mp4; sourceTree = "<group>"; };
+		3718D9A52217D513001398A1 /* ClickOff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ClickOff.mp3; sourceTree = "<group>"; };
+		3718D9A72217D51F001398A1 /* ClickOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ClickOn.mp3; sourceTree = "<group>"; };
+		3718D9A92217D52B001398A1 /* EndCall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EndCall.mp3; sourceTree = "<group>"; };
+		3718D9AB2217D539001398A1 /* OutboundRingTone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OutboundRingTone.mp3; sourceTree = "<group>"; };
+		3718D9AD2217D547001398A1 /* StartCall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StartCall.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +74,81 @@
 		3718D97E22178996001398A1 /* Ice Princess */ = {
 			isa = PBXGroup;
 			children = (
-				3718D97F22178996001398A1 /* AppDelegate.swift */,
-				3718D98122178996001398A1 /* ViewController.swift */,
-				3718D98322178996001398A1 /* Main.storyboard */,
+				3718D99422178A1C001398A1 /* Model */,
+				3718D99322178A15001398A1 /* View */,
+				3718D99222178A09001398A1 /* Controller */,
+				3718D991221789E3001398A1 /* Supporting Files */,
 				3718D98622178997001398A1 /* Assets.xcassets */,
+			);
+			path = "Ice Princess";
+			sourceTree = "<group>";
+		};
+		3718D991221789E3001398A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3718D9A22217D4CD001398A1 /* Sounds */,
+				3718D9A12217D4B7001398A1 /* Videos */,
+				3718D99522178DAE001398A1 /* Fonts */,
+				3718D97F22178996001398A1 /* AppDelegate.swift */,
 				3718D98822178997001398A1 /* LaunchScreen.storyboard */,
 				3718D98B22178997001398A1 /* Info.plist */,
 			);
-			path = "Ice Princess";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3718D99222178A09001398A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3718D99A2217CE37001398A1 /* LaunchScreenViewController.swift */,
+				3718D99C2217D032001398A1 /* MainViewController.swift */,
+				3718D99E2217D1EF001398A1 /* CallViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3718D99322178A15001398A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3718D98322178996001398A1 /* Main.storyboard */,
+				3718D9962217CADC001398A1 /* Classes.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3718D99422178A1C001398A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3718D99522178DAE001398A1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3718D9982217CC3E001398A1 /* Billabong.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		3718D9A12217D4B7001398A1 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				3718D9A32217D4F3001398A1 /* Introduction.mp4 */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+		3718D9A22217D4CD001398A1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3718D9A52217D513001398A1 /* ClickOff.mp3 */,
+				3718D9A72217D51F001398A1 /* ClickOn.mp3 */,
+				3718D9A92217D52B001398A1 /* EndCall.mp3 */,
+				3718D9AB2217D539001398A1 /* OutboundRingTone.mp3 */,
+				3718D9AD2217D547001398A1 /* StartCall.mp3 */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +211,14 @@
 			files = (
 				3718D98A22178997001398A1 /* LaunchScreen.storyboard in Resources */,
 				3718D98722178997001398A1 /* Assets.xcassets in Resources */,
+				3718D9A82217D51F001398A1 /* ClickOn.mp3 in Resources */,
 				3718D98522178996001398A1 /* Main.storyboard in Resources */,
+				3718D9AA2217D52B001398A1 /* EndCall.mp3 in Resources */,
+				3718D9AE2217D547001398A1 /* StartCall.mp3 in Resources */,
+				3718D9A62217D513001398A1 /* ClickOff.mp3 in Resources */,
+				3718D9992217CC3E001398A1 /* Billabong.ttf in Resources */,
+				3718D9AC2217D539001398A1 /* OutboundRingTone.mp3 in Resources */,
+				3718D9A42217D4F3001398A1 /* Introduction.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3718D98222178996001398A1 /* ViewController.swift in Sources */,
+				3718D9972217CADC001398A1 /* Classes.swift in Sources */,
+				3718D99B2217CE37001398A1 /* LaunchScreenViewController.swift in Sources */,
 				3718D98022178996001398A1 /* AppDelegate.swift in Sources */,
+				3718D99F2217D1EF001398A1 /* CallViewController.swift in Sources */,
+				3718D99D2217D032001398A1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4H5H36YM34;
 				INFOPLIST_FILE = "Ice Princess/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ice-Princess";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,6 +401,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4H5H36YM34;
 				INFOPLIST_FILE = "Ice Princess/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ice-Princess";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

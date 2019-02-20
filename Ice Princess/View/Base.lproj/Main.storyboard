@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NK6-r8-y1d">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Billabong.ttf">
+            <string>Billabong</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="Pam-Lh-dyI">
+            <objects>
+                <viewController id="NK6-r8-y1d" customClass="LaunchScreenViewController" customModule="Ice_Princess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qvY-cx-Z3c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="PrincessEyesOpen" translatesAutoresizingMaskIntoConstraints="NO" id="BnO-qm-eRu">
+                                <rect key="frame" x="-62" y="179" width="538" height="538"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BnO-qm-eRu" secondAttribute="height" multiplier="1:1" id="QBi-Hs-FJF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BnO-qm-eRu" firstAttribute="centerX" secondItem="qvY-cx-Z3c" secondAttribute="centerX" id="Cdf-gh-llc"/>
+                            <constraint firstItem="BnO-qm-eRu" firstAttribute="centerY" secondItem="qvY-cx-Z3c" secondAttribute="centerY" id="hfi-zM-8LZ"/>
+                            <constraint firstItem="BnO-qm-eRu" firstAttribute="width" secondItem="qvY-cx-Z3c" secondAttribute="width" multiplier="1.3" id="n6A-eY-WkZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VWG-fg-ihA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VEs-EW-NUJ"/>
+                    <connections>
+                        <outlet property="princessImg" destination="BnO-qm-eRu" id="d5l-dY-2Oi"/>
+                        <segue destination="S3k-L5-lkv" kind="show" identifier="ShowMain" animates="NO" id="D57-L7-7Xh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khZ-Vd-n5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575" y="216"/>
+        </scene>
+        <!--Main View Contoller-->
+        <scene sceneID="N37-pQ-obh">
+            <objects>
+                <viewController id="5W5-Nm-uKu" customClass="MainViewContoller" customModule="Ice_Princess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SfO-Bt-i3A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrincessEyesOpen" translatesAutoresizingMaskIntoConstraints="NO" id="ihu-bb-1We">
+                                <rect key="frame" x="-62" y="179" width="538" height="538"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ihu-bb-1We" secondAttribute="height" multiplier="1:1" id="Uij-54-60V"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Princess!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ah3-SN-pHu">
+                                <rect key="frame" x="41.333333333333343" y="148" width="331.33333333333326" height="90.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ah3-SN-pHu" secondAttribute="height" multiplier="361:99" id="PyB-fu-EFD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="80"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.54117647059999996" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjt-T8-GgL" customClass="RoundBtn" customModule="Ice_Princess" customModuleProvider="target">
+                                <rect key="frame" x="41.333333333333343" y="725" width="331.33333333333326" height="51"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.54117647059999996" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pjt-T8-GgL" secondAttribute="height" multiplier="124:19" id="tHJ-SC-2bD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Call Ice Princess">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3ue-Tb-VzL" kind="presentation" animates="NO" id="0GK-yt-Xvr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ihu-bb-1We" firstAttribute="centerX" secondItem="SfO-Bt-i3A" secondAttribute="centerX" id="4HX-cO-58T"/>
+                            <constraint firstItem="Ah3-SN-pHu" firstAttribute="top" secondItem="nAN-gk-lBs" secondAttribute="top" constant="60" id="AJ3-Ct-dTR"/>
+                            <constraint firstItem="pjt-T8-GgL" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="0.8" id="B1c-VJ-gWK"/>
+                            <constraint firstItem="Ah3-SN-pHu" firstAttribute="centerX" secondItem="SfO-Bt-i3A" secondAttribute="centerX" id="GKh-0P-Oau"/>
+                            <constraint firstItem="pjt-T8-GgL" firstAttribute="top" secondItem="ihu-bb-1We" secondAttribute="bottom" constant="8" symbolic="YES" id="JM7-ah-29l"/>
+                            <constraint firstItem="ihu-bb-1We" firstAttribute="centerY" secondItem="SfO-Bt-i3A" secondAttribute="centerY" id="Yve-Ow-GBV"/>
+                            <constraint firstItem="ihu-bb-1We" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="1.3" id="egz-GT-0Yj"/>
+                            <constraint firstItem="pjt-T8-GgL" firstAttribute="centerX" secondItem="SfO-Bt-i3A" secondAttribute="centerX" id="tqy-Pl-FxR"/>
+                            <constraint firstItem="Ah3-SN-pHu" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="0.8" id="uVh-ry-wWu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nAN-gk-lBs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="grB-Uj-Rvb">
+                        <barButtonItem key="backBarButtonItem" title=" " id="rPh-IT-J9p"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="callBtn" destination="pjt-T8-GgL" id="T6c-xR-wqk"/>
+                        <outlet property="titleLbl" destination="Ah3-SN-pHu" id="8xb-9M-Gnb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l37-k6-cZm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="216"/>
+        </scene>
+        <!--Call View Controller-->
+        <scene sceneID="EJz-MB-kQD">
+            <objects>
+                <viewController id="3ue-Tb-VzL" customClass="CallViewController" customModule="Ice_Princess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZAm-0v-lHe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTg-bQ-iis">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="YMc-BD-Vw0">
+                                <rect key="frame" x="0.0" y="176" width="414" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ice Princess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="V0Z-JH-r2B">
+                                        <rect key="frame" x="116.66666666666667" y="0.0" width="180.66666666666663" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nc7-cC-pwk">
+                                        <rect key="frame" x="179.66666666666666" y="50" width="54.666666666666657" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqz-7W-iCH">
+                                <rect key="frame" x="-45" y="0.0" width="504" height="896"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xqz-7W-iCH" secondAttribute="height" multiplier="9:16" id="deN-aw-CvW"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3H-Rm-zlF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrincessPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="QKP-0J-CDh" customClass="CircleImg" customModule="Ice_Princess" customModuleProvider="target">
+                                <rect key="frame" x="325.33333333333331" y="140.66666666666666" width="68.666666666666686" height="68.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QKP-0J-CDh" secondAttribute="height" multiplier="1:1" id="qS0-sQ-UQz"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Csb-Gi-noW">
+                                <rect key="frame" x="20" y="132" width="256" height="86"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ice Princess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="H42-e1-HgD">
+                                        <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calling..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="FBX-T1-DVL">
+                                        <rect key="frame" x="0.0" y="43" width="74.333333333333329" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKj-oB-CA0">
+                                <rect key="frame" x="165.66666666666666" y="701" width="82.666666666666657" height="82.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SKj-oB-CA0" secondAttribute="height" multiplier="1:1" id="IK9-oB-zcL"/>
+                                </constraints>
+                                <state key="normal" image="EndCall"/>
+                                <connections>
+                                    <action selector="endCall:" destination="3ue-Tb-VzL" eventType="touchUpInside" id="Qac-wP-feB"/>
+                                    <segue destination="6LR-VC-XOG" kind="unwind" identifier="exitModalScene" animates="NO" unwindAction="exitModalScene:" id="qxv-Er-IUu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YMc-BD-Vw0" firstAttribute="centerX" secondItem="sm8-gf-6pn" secondAttribute="centerX" id="2an-eh-dT4"/>
+                            <constraint firstItem="sm8-gf-6pn" firstAttribute="trailing" secondItem="Csb-Gi-noW" secondAttribute="trailing" multiplier="1.5" id="8hc-5j-5oB"/>
+                            <constraint firstItem="sm8-gf-6pn" firstAttribute="trailing" secondItem="QKP-0J-CDh" secondAttribute="trailing" constant="20" id="8jc-9Y-5yf"/>
+                            <constraint firstItem="Xqz-7W-iCH" firstAttribute="centerX" secondItem="ZAm-0v-lHe" secondAttribute="centerX" id="AgX-XG-Ith"/>
+                            <constraint firstItem="d3H-Rm-zlF" firstAttribute="leading" secondItem="sm8-gf-6pn" secondAttribute="leading" id="BlK-yK-A50"/>
+                            <constraint firstItem="QKP-0J-CDh" firstAttribute="centerY" secondItem="Csb-Gi-noW" secondAttribute="centerY" id="CLc-N5-5x3"/>
+                            <constraint firstItem="YMc-BD-Vw0" firstAttribute="top" secondItem="sm8-gf-6pn" secondAttribute="top" multiplier="4" id="Cvt-2Z-atP"/>
+                            <constraint firstItem="QKP-0J-CDh" firstAttribute="leading" secondItem="Csb-Gi-noW" secondAttribute="trailing" multiplier="1.15" constant="8" symbolic="YES" id="LzK-BH-hjx"/>
+                            <constraint firstAttribute="bottom" secondItem="TTg-bQ-iis" secondAttribute="bottom" id="N5s-2P-KRf"/>
+                            <constraint firstItem="sm8-gf-6pn" firstAttribute="leading" secondItem="TTg-bQ-iis" secondAttribute="leading" id="Ned-Bd-Dar"/>
+                            <constraint firstItem="Csb-Gi-noW" firstAttribute="top" secondItem="sm8-gf-6pn" secondAttribute="top" multiplier="3" id="ObE-gv-nQU"/>
+                            <constraint firstItem="Xqz-7W-iCH" firstAttribute="top" secondItem="ZAm-0v-lHe" secondAttribute="top" id="S3c-TD-ccP"/>
+                            <constraint firstItem="d3H-Rm-zlF" firstAttribute="top" secondItem="ZAm-0v-lHe" secondAttribute="top" id="Vrl-Ca-hRn"/>
+                            <constraint firstAttribute="bottom" secondItem="Xqz-7W-iCH" secondAttribute="bottom" id="XKk-7F-tkE"/>
+                            <constraint firstItem="TTg-bQ-iis" firstAttribute="trailing" secondItem="sm8-gf-6pn" secondAttribute="trailing" id="Xrm-T3-Wwv"/>
+                            <constraint firstItem="SKj-oB-CA0" firstAttribute="width" secondItem="ZAm-0v-lHe" secondAttribute="width" multiplier="0.2" id="bpj-S6-rgp"/>
+                            <constraint firstItem="Csb-Gi-noW" firstAttribute="leading" secondItem="sm8-gf-6pn" secondAttribute="leading" constant="20" id="gyQ-DZ-lJl"/>
+                            <constraint firstItem="TTg-bQ-iis" firstAttribute="top" secondItem="ZAm-0v-lHe" secondAttribute="top" id="jyQ-G7-brV"/>
+                            <constraint firstAttribute="bottom" secondItem="d3H-Rm-zlF" secondAttribute="bottom" id="mn4-ux-h8O"/>
+                            <constraint firstItem="sm8-gf-6pn" firstAttribute="bottom" secondItem="SKj-oB-CA0" secondAttribute="bottom" multiplier="1.1" id="nYS-TE-YXZ"/>
+                            <constraint firstItem="YMc-BD-Vw0" firstAttribute="width" secondItem="ZAm-0v-lHe" secondAttribute="width" id="oma-E5-fGH"/>
+                            <constraint firstItem="SKj-oB-CA0" firstAttribute="centerX" secondItem="ZAm-0v-lHe" secondAttribute="centerX" id="qKM-IL-LWp"/>
+                            <constraint firstItem="sm8-gf-6pn" firstAttribute="trailing" secondItem="d3H-Rm-zlF" secondAttribute="trailing" id="sa6-3N-nJa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sm8-gf-6pn"/>
+                    </view>
+                    <connections>
+                        <outlet property="callingLbl" destination="FBX-T1-DVL" id="xIf-Rh-NNO"/>
+                        <outlet property="callingNameLbl" destination="H42-e1-HgD" id="ZQD-x6-fDK"/>
+                        <outlet property="cameraView" destination="Xqz-7W-iCH" id="9Ev-c9-ZZp"/>
+                        <outlet property="darkView" destination="d3H-Rm-zlF" id="crF-6l-kWW"/>
+                        <outlet property="endCallBtn" destination="SKj-oB-CA0" id="ca0-BM-nip"/>
+                        <outlet property="nameLbl" destination="V0Z-JH-r2B" id="0bp-X9-ZRQ"/>
+                        <outlet property="princessImg" destination="QKP-0J-CDh" id="HkB-Hp-R76"/>
+                        <outlet property="timeLbl" destination="Nc7-cC-pwk" id="a9S-2z-ABU"/>
+                        <outlet property="videoView" destination="TTg-bQ-iis" id="oTF-qT-ceW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KZ-3H-PzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6LR-VC-XOG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="216"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UKB-1Q-SnX">
+            <objects>
+                <navigationController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" id="S3k-L5-lkv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LcM-Fc-VDU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.51764705879999995" green="0.75294117650000003" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5W5-Nm-uKu" kind="relationship" relationship="rootViewController" id="gB0-6q-iqu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6At-U1-cbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="216"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EndCall" width="216" height="216"/>
+        <image name="PrincessEyesOpen" width="1440" height="1440"/>
+        <image name="PrincessPhoto" width="500" height="500"/>
+    </resources>
+</document>

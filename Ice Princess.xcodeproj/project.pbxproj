@@ -22,6 +22,12 @@
 		3718D9AA2217D52B001398A1 /* EndCall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A92217D52B001398A1 /* EndCall.mp3 */; };
 		3718D9AC2217D539001398A1 /* OutboundRingTone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9AB2217D539001398A1 /* OutboundRingTone.mp3 */; };
 		3718D9AE2217D547001398A1 /* StartCall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9AD2217D547001398A1 /* StartCall.mp3 */; };
+		373703F7221F1D6700FDA14D /* ParentsOnlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373703F6221F1D6700FDA14D /* ParentsOnlyViewController.swift */; };
+		373703F9221FB2E800FDA14D /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373703F8221FB2E800FDA14D /* EpisodesViewController.swift */; };
+		373703FB221FB44700FDA14D /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373703FA221FB44700FDA14D /* PreviewViewController.swift */; };
+		373703FD22224C2300FDA14D /* HappyBirthday.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 373703FC22224C2300FDA14D /* HappyBirthday.mp4 */; };
+		373703FF222282F000FDA14D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373703FE222282F000FDA14D /* Protocols.swift */; };
+		375CB6CB222628CD004699C2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375CB6CA222628CD004699C2 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		3718D9A92217D52B001398A1 /* EndCall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EndCall.mp3; sourceTree = "<group>"; };
 		3718D9AB2217D539001398A1 /* OutboundRingTone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OutboundRingTone.mp3; sourceTree = "<group>"; };
 		3718D9AD2217D547001398A1 /* StartCall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StartCall.mp3; sourceTree = "<group>"; };
+		373703F6221F1D6700FDA14D /* ParentsOnlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsOnlyViewController.swift; sourceTree = "<group>"; };
+		373703F8221FB2E800FDA14D /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		373703FA221FB44700FDA14D /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		373703FC22224C2300FDA14D /* HappyBirthday.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyBirthday.mp4; sourceTree = "<group>"; };
+		373703FE222282F000FDA14D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		375CB6CA222628CD004699C2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375CB6CB222628CD004699C2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +73,7 @@
 			children = (
 				3718D97E22178996001398A1 /* Ice Princess */,
 				3718D97D22178996001398A1 /* Products */,
+				375CB6C9222628CD004699C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +113,13 @@
 		3718D99222178A09001398A1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3718D99E2217D1EF001398A1 /* CallViewController.swift */,
+				373703F8221FB2E800FDA14D /* EpisodesViewController.swift */,
 				3718D99A2217CE37001398A1 /* LaunchScreenViewController.swift */,
 				3718D99C2217D032001398A1 /* MainViewController.swift */,
-				3718D99E2217D1EF001398A1 /* CallViewController.swift */,
+				373703F6221F1D6700FDA14D /* ParentsOnlyViewController.swift */,
+				373703FA221FB44700FDA14D /* PreviewViewController.swift */,
+				373703FE222282F000FDA14D /* Protocols.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -135,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				3718D9A32217D4F3001398A1 /* Introduction.mp4 */,
+				373703FC22224C2300FDA14D /* HappyBirthday.mp4 */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -149,6 +168,14 @@
 				3718D9AD2217D547001398A1 /* StartCall.mp3 */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		375CB6C9222628CD004699C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				375CB6CA222628CD004699C2 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +210,11 @@
 				TargetAttributes = {
 					3718D97B22178996001398A1 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -216,6 +248,7 @@
 				3718D9AA2217D52B001398A1 /* EndCall.mp3 in Resources */,
 				3718D9AE2217D547001398A1 /* StartCall.mp3 in Resources */,
 				3718D9A62217D513001398A1 /* ClickOff.mp3 in Resources */,
+				373703FD22224C2300FDA14D /* HappyBirthday.mp4 in Resources */,
 				3718D9992217CC3E001398A1 /* Billabong.ttf in Resources */,
 				3718D9AC2217D539001398A1 /* OutboundRingTone.mp3 in Resources */,
 				3718D9A42217D4F3001398A1 /* Introduction.mp4 in Resources */,
@@ -229,11 +262,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373703F7221F1D6700FDA14D /* ParentsOnlyViewController.swift in Sources */,
 				3718D9972217CADC001398A1 /* Classes.swift in Sources */,
+				373703F9221FB2E800FDA14D /* EpisodesViewController.swift in Sources */,
+				373703FF222282F000FDA14D /* Protocols.swift in Sources */,
 				3718D99B2217CE37001398A1 /* LaunchScreenViewController.swift in Sources */,
 				3718D98022178996001398A1 /* AppDelegate.swift in Sources */,
 				3718D99F2217D1EF001398A1 /* CallViewController.swift in Sources */,
 				3718D99D2217D032001398A1 /* MainViewController.swift in Sources */,
+				373703FB221FB44700FDA14D /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

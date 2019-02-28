@@ -6,6 +6,10 @@ import NotificationCenter
 class CallViewController: UIViewController {
     
     //MARK: - Constants
+    private enum Settings: String {
+        case CallVideo
+    }
+    
     private enum SoundFile: String {
         case OutboundRingTone, StartCall, EndCall, ClickOff
     }
@@ -152,7 +156,7 @@ class CallViewController: UIViewController {
     }
     
     private func setupVideo() {
-        guard let url = Bundle.main.path(forResource: "Introduction", ofType: "mp4") else {
+        guard let url = Bundle.main.path(forResource: videoName, ofType: "mp4") else {
             debugPrint("Video not found")
             return
         }
@@ -164,6 +168,7 @@ class CallViewController: UIViewController {
     }
     
     private func updateUI() {
+        videoName = UserDefaults.standard.string(forKey: Settings.CallVideo.rawValue)
         setupDevices()
         captureSession.startRunning()
         cameraView.isHidden = false

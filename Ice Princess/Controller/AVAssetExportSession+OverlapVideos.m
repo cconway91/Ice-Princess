@@ -38,35 +38,40 @@
     MainCompositionInst.instructions = [NSArray arrayWithObject:MainInstruction];
     MainCompositionInst.frameDuration = CMTimeMake(1, 30);
     //PortraitMode
-    CGSize sizeOfVideo = [UIScreen mainScreen].bounds.size;;
+    CGSize sizeOfVideo = [UIScreen mainScreen].bounds.size;
+    CGFloat sizeOfScreenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat watermarkSize = 0;
+    CGFloat textWidth = 0;
+    CGFloat fontSize = 0;
     if (isPortraitMode) {
         MainCompositionInst.renderSize = [UIScreen mainScreen].bounds.size;
         sizeOfVideo = [UIScreen mainScreen].bounds.size;
+        watermarkSize = 100;
+        textWidth = 150;
+        fontSize = 36;
     } else {
-        MainCompositionInst.renderSize = CGSizeMake(350, 275);
-        sizeOfVideo = CGSizeMake(350, 275);
+        MainCompositionInst.renderSize = CGSizeMake(sizeOfScreenWidth, sizeOfScreenWidth);
+        sizeOfVideo = CGSizeMake(sizeOfScreenWidth, sizeOfScreenWidth);
+        watermarkSize = 40;
+        textWidth = 60;
+        fontSize = 18;
     }
     
-    UIImage *myImage=[UIImage imageNamed:@"watermark.png"];
+    UIImage *myImage=[UIImage imageNamed:@"Watermark.png"];
     CALayer *layerCa = [CALayer layer];
     layerCa.contents = (id)myImage.CGImage;
-    layerCa.frame = CGRectMake(15, 15, 80, 80);
-    layerCa.contentsGravity = kCAGravityResizeAspect;
+    layerCa.frame = CGRectMake(15, 35, watermarkSize, watermarkSize);
     layerCa.opacity = 1.0;
-    
-    //    layerCa.contentsScale = [[UIScreen mainScreen] scale];
     
     
     CATextLayer *layerText = [CATextLayer layer];
-    layerText.string = @"Video Call Princess App";
-    layerText.font = (__bridge CFTypeRef)@"font18";
-    layerText.fontSize = 36;
+    layerText.string = @"Video Call Ice Princess";
+    layerText.font = (__bridge CFTypeRef)@"Billabong";
+    layerText.fontSize = fontSize;
     layerText.alignmentMode = kCAAlignmentLeft;
     layerText.wrapped = YES;
-    layerText.frame = CGRectMake(sizeOfVideo.width/4, -5, 150, 100);
-    
-    //    layerText.contentsScale = [[UIScreen mainScreen] scale];
-    
+    layerText.frame = CGRectMake(watermarkSize + 20, watermarkSize/4, textWidth, 100);
+        
     
     CALayer *parentLayer=[CALayer layer];
     CALayer *videoLayer=[CALayer layer];

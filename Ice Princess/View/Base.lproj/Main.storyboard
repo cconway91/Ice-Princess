@@ -1024,7 +1024,7 @@ For more details, please visit our Privacy Policy page:</string>
                                                 <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="PrincessEyesOpen" translatesAutoresizingMaskIntoConstraints="NO" id="T4A-WH-KLm">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="AboutUsImg" translatesAutoresizingMaskIntoConstraints="NO" id="T4A-WH-KLm">
                                                 <rect key="frame" x="163" y="35" width="70" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="cOW-8t-03t"/>
@@ -1584,6 +1584,7 @@ and we NEVER collect data from you!</string>
         </scene>
     </scenes>
     <resources>
+        <image name="AboutUsImg" width="1075" height="1075"/>
         <image name="ArrowLeft" width="261" height="489"/>
         <image name="ArrowRight" width="261" height="489"/>
         <image name="Call" width="530" height="530"/>

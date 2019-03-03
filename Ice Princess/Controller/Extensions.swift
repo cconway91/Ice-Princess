@@ -57,13 +57,15 @@ extension String {
         let assetInfo = orientationFromTransform(transform: transform)
 
         if isPortraitMode {
-            var scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.width
+            //Scaled the video to hight not width of screen
+            var scaleToFitRatio = UIScreen.main.bounds.height / assetTrack.naturalSize.height
             if assetInfo.isPortrait {
-                scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.height
+                scaleToFitRatio = UIScreen.main.bounds.width / UIScreen.main.bounds.height
                 scaleToFitRatio = isPortraitMode && isSmaller ? scaleToFitRatio / 4 : scaleToFitRatio
                 let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
                 if isPortraitMode && isSmaller {
                     let assetSize = CGSize(width: scaleToFitRatio * assetTrack.naturalSize.height, height: scaleToFitRatio * assetTrack.naturalSize.width)
+                    //this puts the smaller video in the corner.
                     let translation = CGAffineTransform(translationX: UIScreen.main.bounds.width - assetSize.width - 30,
                                                         y: UIScreen.main.bounds.height - assetSize.height - 30)
                     instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(translation),
@@ -86,17 +88,17 @@ extension String {
                 instruction.setTransform(concat, at: CMTime.zero)
             }
         } else {
-            var scaleToFitRatio = 175 / assetTrack.naturalSize.width
+            var scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.height
             if assetInfo.isPortrait {
-                scaleToFitRatio = 175 / assetTrack.naturalSize.height
+                scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.width
                 let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
-                let translation = CGAffineTransform(translationX: isSmaller ? 175 : 0,
+                let translation = CGAffineTransform(translationX: isSmaller ? (UIScreen.main.bounds.width/2) : 0,
                                                     y: 0)
                 instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(translation),
                                          at: CMTime.zero)
             } else {
                 let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
-                let translation = CGAffineTransform(translationX: isSmaller ? 175 : 0,
+                let translation = CGAffineTransform(translationX: isSmaller ? (UIScreen.main.bounds.width/2) : 0,
                                                     y: 0)
                 var concat = assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(translation)
                 if assetInfo.orientation == .down {

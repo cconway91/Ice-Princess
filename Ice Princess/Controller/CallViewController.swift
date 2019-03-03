@@ -130,10 +130,6 @@ class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate
         player.play()
     }
     
-    private func setupCaptureSession() {
-        captureSession.sessionPreset = AVCaptureSession.Preset.high
-    }
-    
     private func setupDevice() {
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(
             deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera, .builtInMicrophone],
@@ -152,7 +148,6 @@ class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate
     }
     
     private func setupDevices() {
-        setupCaptureSession()
         setupDevice()
         setupInputOutput()
         setupPreviewLayer()

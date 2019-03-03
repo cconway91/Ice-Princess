@@ -26,6 +26,7 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        deleteOverlapVideo()
         updateUI()
     }
     

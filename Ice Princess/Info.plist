@@ -24,6 +24,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>So your kids can appear on the chat screen.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>So your voice can be heard in your recorded videos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>So your videos can be recorded for your own use.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

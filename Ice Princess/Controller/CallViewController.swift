@@ -3,11 +3,11 @@ import AVKit
 import AVFoundation
 import NotificationCenter
 
-class CallViewController: UIViewController {
+class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate {
     
     //MARK: - Constants
     private enum Settings: String {
-        case CallVideo
+        case CallVideo, IsRecordingOn
     }
     
     private enum SoundFile: String {
@@ -65,6 +65,13 @@ class CallViewController: UIViewController {
         })
     }
     
+    func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
+        if error != nil {
+            print(error!)
+            return
+        }
+    }
+    
     private func getTimeString(from time:CMTime) -> String {
         let totalSeconds = CMTimeGetSeconds(time)
         let minutes = Int(totalSeconds/60) % 60
@@ -76,6 +83,7 @@ class CallViewController: UIViewController {
         playSound(soundFile: SoundFile.EndCall.rawValue, soundFileType: "mp3")
         player.pause()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.recordVideo()
             self.captureSession.stopRunning()
             self.performSegue(withIdentifier: "exitModalScene", sender: self)
         }
@@ -98,6 +106,25 @@ class CallViewController: UIViewController {
         }
     }
     
+    private func recordVideo() {
+        let defaults = UserDefaults.standard
+        let recordingPermission = defaults.bool(forKey: Settings.IsRecordingOn.rawValue)
+        if recordingPermission {
+            if isRecording {
+                isRecording = false
+                videoFileOutput?.stopRecording()
+            } else {
+                isRecording = true
+                let randomFilename = String.randomStringWithLength(16) + "Episode" + videoName + ".mov"
+                var documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+                documentsDirectory.appendPathComponent(randomFilename)
+                videoFileOutput?.startRecording(to: documentsDirectory, recordingDelegate: self)
+            }
+        } else {
+            print("Recording Permission isOff")
+        }
+    }
+    
     private func resetVideo() {
         player.seek(to: ResetTime.SeekTime)
         player.play()
@@ -109,7 +136,7 @@ class CallViewController: UIViewController {
     
     private func setupDevice() {
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(
-            deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera],
+            deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera, .builtInMicrophone],
             mediaType: nil,
             position: AVCaptureDevice.Position.unspecified)
         let devices = deviceDiscoverySession.devices
@@ -136,9 +163,9 @@ class CallViewController: UIViewController {
     private func setupInputOutput() {
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: currentDevice!)
-//            let audioDeviceInput = try AVCaptureDeviceInput(device: audioDevice!)
+            let audioDeviceInput = try AVCaptureDeviceInput(device: audioDevice!)
             captureSession.addInput(captureDeviceInput)
-//            captureSession.addInput(audioDeviceInput)
+            captureSession.addInput(audioDeviceInput)
             videoFileOutput = AVCaptureMovieFileOutput()
             captureSession.addOutput(videoFileOutput!)
         } catch {
@@ -189,6 +216,7 @@ class CallViewController: UIViewController {
                     self.cameraView.transform = scale.concatenating(translate)
                 })
                 NotificationCenter.default.addObserver(self, selector: #selector(CallViewController.playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+                self.recordVideo()
                 self.resetVideo()
                 self.addTime()
             }
@@ -199,6 +227,7 @@ class CallViewController: UIViewController {
     @IBAction func endCall(_ sender: UIButton) {
         playSound(soundFile: SoundFile.ClickOff.rawValue, soundFileType: "mp3")
         player.pause()
+        recordVideo()
         captureSession.stopRunning()
     }
     

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let defaults = UserDefaults.standard
         let defaultValues = ["CallVideo" : "Introduction"]
-        let episodeDefaultValues = ["Introduction" : true, "HappyBirthday" : false]
+        let episodeDefaultValues = ["IsRecordingOn" : true, "Introduction" : true, "HappyBirthday" : false]
         defaults.register(defaults: defaultValues)
         defaults.register(defaults: episodeDefaultValues)
         return true

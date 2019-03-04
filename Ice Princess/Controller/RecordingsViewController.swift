@@ -12,7 +12,6 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //MARK: - Properties
     var cells: [Int: RecordingsTableViewCell] = [:]
-    var isDone = false
     var shareVideoName: String!
     var shareVideoURL: URL!
     var tasks = [URLSessionTask]()
@@ -232,16 +231,12 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 activityVC.completionWithItemsHandler = { (activityType, completed:Bool, returnedItems:[Any]?, error: Error?) in
                     if completed {
                         self.deleteOverlapVideo()
+                        self.verticalSelected = true
                     }
                 }
                 activityVC.popoverPresentationController?.sourceView = self.view
                 self.present(activityVC, animated: true, completion: nil)
-                self.isDone = true
             }
-        }
-        if isDone == true {
-            isDone = false
-            verticalSelected = true
         }
     }
 }

@@ -22,7 +22,7 @@
     [secondTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, firstAsset.duration) ofTrack:[[secondAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:kCMTimeZero error:nil];
     
     AVMutableVideoCompositionInstruction * MainInstruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
-    MainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, secondAsset.duration);
+    MainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, firstAsset.duration);
     
     
     //set where the first screen is located
@@ -41,26 +41,41 @@
     CGSize sizeOfVideo = [UIScreen mainScreen].bounds.size;
     CGFloat sizeOfScreenWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat watermarkSize = 0;
+    CGFloat watermarkXPosition = 0;
+    CGFloat watermarkYPosition = 0;
     CGFloat textWidth = 0;
+    CGFloat textHeight = 0;
     CGFloat fontSize = 0;
+    CGFloat textXPosition = 0;
+    CGFloat textYPosition = 0;
     if (isPortraitMode) {
         MainCompositionInst.renderSize = [UIScreen mainScreen].bounds.size;
         sizeOfVideo = [UIScreen mainScreen].bounds.size;
         watermarkSize = 100;
+        watermarkXPosition = 15;
+        watermarkYPosition = 35;
         textWidth = 150;
+        textHeight = 95;
         fontSize = 36;
+        textXPosition = 125;
+        textYPosition = 35;
     } else {
         MainCompositionInst.renderSize = CGSizeMake(sizeOfScreenWidth, sizeOfScreenWidth);
         sizeOfVideo = CGSizeMake(sizeOfScreenWidth, sizeOfScreenWidth);
-        watermarkSize = 40;
-        textWidth = 60;
-        fontSize = 18;
+        watermarkSize = 75;
+        watermarkXPosition = 15;
+        watermarkYPosition = 15;
+        textWidth = 115;
+        textHeight = 70;
+        fontSize = 27;
+        textXPosition = 100;
+        textYPosition = 15;
     }
     
     UIImage *myImage=[UIImage imageNamed:@"Watermark.png"];
     CALayer *layerCa = [CALayer layer];
     layerCa.contents = (id)myImage.CGImage;
-    layerCa.frame = CGRectMake(15, 35, watermarkSize, watermarkSize);
+    layerCa.frame = CGRectMake(watermarkXPosition, watermarkYPosition, watermarkSize, watermarkSize);
     layerCa.opacity = 1.0;
     
     
@@ -70,7 +85,7 @@
     layerText.fontSize = fontSize;
     layerText.alignmentMode = kCAAlignmentLeft;
     layerText.wrapped = YES;
-    layerText.frame = CGRectMake(watermarkSize + 20, watermarkSize/4, textWidth, 100);
+    layerText.frame = CGRectMake(textXPosition, textYPosition, textWidth, textHeight);
         
     
     CALayer *parentLayer=[CALayer layer];

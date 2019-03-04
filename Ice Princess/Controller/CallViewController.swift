@@ -80,11 +80,10 @@ class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate
     }
     
     @objc func playerDidFinishPlaying() {
+        recordVideo()
         playSound(soundFile: SoundFile.EndCall.rawValue, soundFileType: "mp3")
-        player.pause()
+        captureSession.stopRunning()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.recordVideo()
-            self.captureSession.stopRunning()
             self.performSegue(withIdentifier: "exitModalScene", sender: self)
         }
     }
@@ -193,6 +192,7 @@ class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate
         videoName = UserDefaults.standard.string(forKey: Settings.CallVideo.rawValue)
         setupDevices()
         captureSession.startRunning()
+        NotificationCenter.default.addObserver(self, selector: #selector(CallViewController.playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         cameraView.isHidden = false
         playSound(soundFile: SoundFile.OutboundRingTone.rawValue, soundFileType: "mp3")
         DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
@@ -210,7 +210,6 @@ class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate
                 UIView.animate(withDuration: 0.3, animations: {
                     self.cameraView.transform = scale.concatenating(translate)
                 })
-                NotificationCenter.default.addObserver(self, selector: #selector(CallViewController.playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
                 self.recordVideo()
                 self.resetVideo()
                 self.addTime()

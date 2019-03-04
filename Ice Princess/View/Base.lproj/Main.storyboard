@@ -1532,8 +1532,8 @@ and we NEVER collect data from you!</string>
                                             <outlet property="playBtn" destination="qth-6B-fIC" id="qeA-Ci-dSg"/>
                                             <outlet property="progressView" destination="lN4-xw-78h" id="ZAx-63-sfT"/>
                                             <outlet property="rightTime" destination="HT2-Sn-I4O" id="LTe-r8-BeU"/>
-                                            <outlet property="silentVideoView" destination="GW7-hB-JR2" id="IS4-mA-bMe"/>
-                                            <outlet property="videoView" destination="v1s-C0-IvY" id="a12-rB-86H"/>
+                                            <outlet property="silentVideoView" destination="v1s-C0-IvY" id="4rc-oR-gEj"/>
+                                            <outlet property="videoView" destination="GW7-hB-JR2" id="Ot4-Al-YGf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -64,8 +64,8 @@ extension String {
                 scaleToFitRatio = isPortraitMode && isSmaller ? scaleToFitRatio / 4 : scaleToFitRatio
                 let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
                 if isPortraitMode && isSmaller {
-                    let assetSize = CGSize(width: scaleToFitRatio * assetTrack.naturalSize.height, height: scaleToFitRatio * assetTrack.naturalSize.width)
                     //this puts the smaller video in the corner.
+                    let assetSize = CGSize(width: scaleToFitRatio * assetTrack.naturalSize.height, height: scaleToFitRatio * assetTrack.naturalSize.width)
                     let translation = CGAffineTransform(translationX: UIScreen.main.bounds.width - assetSize.width - 30,
                                                         y: UIScreen.main.bounds.height - assetSize.height - 30)
                     instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(translation),

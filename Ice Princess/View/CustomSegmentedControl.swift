@@ -9,6 +9,7 @@ class CustomSegmentedControl: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        segmentedControl.removeAllSegments()
         backgroundColor = .white
         segmentedControl.backgroundColor = .clear
         segmentedControl.tintColor = .clear

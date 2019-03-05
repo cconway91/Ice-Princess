@@ -8,7 +8,6 @@ class SettingsViewController: UITableViewController {
     }
     
     private struct Storyboard {
-        static let ShowAboutUsSegueIdentifier = "ShowAboutUs"
         static let ShowWhyOurAppisSafeSegueIdentifier = "ShowWhyOurAppisSafe"
     }
     
@@ -46,13 +45,13 @@ class SettingsViewController: UITableViewController {
     
     //Mark: - Tableview Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 2 {
-            delegate?.segueToNext(identifier: Storyboard.ShowAboutUsSegueIdentifier)
-        }
-        if indexPath.row == 3 {
+        if indexPath.row == 1 {
             delegate?.segueToNext(identifier: Storyboard.ShowWhyOurAppisSafeSegueIdentifier)
         }
-        if indexPath.row == 4 {
+        if indexPath.row == 2 {
+            //Add link to review
+        }
+        if indexPath.row == 3 {
             UIApplication.shared.open(URL(string: "https://www.facebook.com/VideoCallPrincess/")! as URL, options: [:], completionHandler: nil)
         }
     }

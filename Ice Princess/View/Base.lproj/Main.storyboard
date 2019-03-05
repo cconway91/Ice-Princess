@@ -16,9 +16,6 @@
         <array key="SF UI Display Light.otf">
             <string>SFUIDisplay-Light</string>
         </array>
-        <array key="SF-UI-Display-Medium.otf">
-            <string>SFUIDisplay-Medium</string>
-        </array>
         <array key="SF-UI-Display-Regular.ttf">
             <string>SFUIDisplay-Regular</string>
         </array>
@@ -155,9 +152,8 @@
                                     <constraint firstAttribute="height" constant="50" id="y39-Uc-lCn"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-TJ-i2y">
-                                <rect key="frame" x="0.0" y="146" width="414" height="750"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-TJ-i2y">
+                                <rect key="frame" x="0.0" y="142" width="414" height="754"/>
                                 <connections>
                                     <segue destination="Qgr-jn-tu0" kind="embed" identifier="ShowSettings" id="5Qb-E3-DwO"/>
                                 </connections>
@@ -168,9 +164,8 @@
                                     <segue destination="d3L-Qb-Kw3" kind="embed" id="Fyn-8N-Zij"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CPI-Zr-qTw">
-                                <rect key="frame" x="0.0" y="146" width="414" height="750"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPI-Zr-qTw">
+                                <rect key="frame" x="0.0" y="142" width="414" height="754"/>
                                 <connections>
                                     <segue destination="lXh-pe-ccm" kind="embed" id="RSy-Vl-zKY"/>
                                 </connections>
@@ -178,14 +173,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="EcE-TJ-i2y" firstAttribute="top" secondItem="K1k-JI-DPl" secondAttribute="bottom" constant="4" id="1eP-v2-j5H"/>
+                            <constraint firstItem="EcE-TJ-i2y" firstAttribute="trailing" secondItem="sGl-8b-4RR" secondAttribute="trailing" id="25u-Vz-bKc"/>
+                            <constraint firstItem="CPI-Zr-qTw" firstAttribute="leading" secondItem="sGl-8b-4RR" secondAttribute="leading" id="5on-hx-v5K"/>
                             <constraint firstItem="TDk-lC-obT" firstAttribute="leading" secondItem="sGl-8b-4RR" secondAttribute="leading" id="7Fb-GJ-c3W"/>
-                            <constraint firstItem="K1k-JI-DPl" firstAttribute="centerX" secondItem="rxh-E5-nZp" secondAttribute="centerX" id="9da-FF-SfX"/>
+                            <constraint firstItem="CPI-Zr-qTw" firstAttribute="trailing" secondItem="sGl-8b-4RR" secondAttribute="trailing" id="Crz-ag-Ycu"/>
+                            <constraint firstItem="K1k-JI-DPl" firstAttribute="trailing" secondItem="sGl-8b-4RR" secondAttribute="trailing" id="DfZ-DJ-702"/>
+                            <constraint firstItem="EcE-TJ-i2y" firstAttribute="leading" secondItem="sGl-8b-4RR" secondAttribute="leading" id="Dw0-MD-iJQ"/>
                             <constraint firstItem="TDk-lC-obT" firstAttribute="trailing" secondItem="sGl-8b-4RR" secondAttribute="trailing" id="GYU-gp-s6x"/>
                             <constraint firstItem="K1k-JI-DPl" firstAttribute="leading" secondItem="sGl-8b-4RR" secondAttribute="leading" id="Jll-lV-to9"/>
                             <constraint firstItem="K1k-JI-DPl" firstAttribute="top" secondItem="sGl-8b-4RR" secondAttribute="top" id="MmX-Tg-Rf3"/>
+                            <constraint firstItem="CPI-Zr-qTw" firstAttribute="top" secondItem="K1k-JI-DPl" secondAttribute="bottom" constant="4" id="Naj-ih-CMF"/>
                             <constraint firstItem="TDk-lC-obT" firstAttribute="top" secondItem="K1k-JI-DPl" secondAttribute="bottom" constant="4" id="WBr-gO-Agb"/>
+                            <constraint firstAttribute="bottom" secondItem="CPI-Zr-qTw" secondAttribute="bottom" id="c0I-3l-l2Z"/>
+                            <constraint firstAttribute="bottom" secondItem="EcE-TJ-i2y" secondAttribute="bottom" id="eeG-pb-qmj"/>
                             <constraint firstAttribute="bottom" secondItem="TDk-lC-obT" secondAttribute="bottom" id="oJE-wd-Yrn"/>
-                            <constraint firstItem="K1k-JI-DPl" firstAttribute="width" secondItem="rxh-E5-nZp" secondAttribute="width" id="oMW-Ay-TUw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sGl-8b-4RR"/>
                     </view>
@@ -197,7 +199,6 @@
                         <outlet property="recordingsView" destination="CPI-Zr-qTw" id="46O-2s-ogZ"/>
                         <outlet property="segmentControl" destination="K1k-JI-DPl" id="jGW-Oc-pSO"/>
                         <outlet property="settingsView" destination="EcE-TJ-i2y" id="FgG-N8-9JU"/>
-                        <segue destination="ZCw-C5-Opf" kind="show" identifier="ShowAboutUs" id="bxw-43-I9O"/>
                         <segue destination="zZK-wP-yIF" kind="show" identifier="ShowWhyOurAppisSafe" id="uZN-pB-eek"/>
                     </connections>
                 </viewController>
@@ -954,172 +955,6 @@
             </objects>
             <point key="canvasLocation" x="2674" y="668"/>
         </scene>
-        <!--About Us-->
-        <scene sceneID="aHj-Hd-uWu">
-            <objects>
-                <viewController id="ZCw-C5-Opf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9Xf-z0-3fM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMt-uY-Qat">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DO-UB-xyN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="897"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="P4C-4F-2jL">
-                                                <rect key="frame" x="29" y="168" width="337.5" height="49"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="P4C-4F-2jL" secondAttribute="height" multiplier="373:54" id="2IZ-xK-1DO"/>
-                                                </constraints>
-                                                <string key="text">Made with love by HappiestApps, Inc. HappiestApps Team makes the best app for all ages. Please visit us at:
-</string>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZOr-rg-frb">
-                                                <rect key="frame" x="29" y="271" width="337.5" height="49"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="ZOr-rg-frb" secondAttribute="height" multiplier="373:54" id="VAg-Wu-mhi"/>
-                                                </constraints>
-                                                <string key="text">Video Call Princess never collects any data from you. 
-Your conversations are solely for you to keep or share. 
-For more details, please visit our Privacy Policy page:</string>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="v 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9m-T1-hmc">
-                                                <rect key="frame" x="29" y="468" width="356" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="jan-em-EOj"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Privacy on Video Call Princess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Flh-qk-t1Y">
-                                                <rect key="frame" x="29" y="245" width="337.5" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Flh-qk-t1Y" secondAttribute="height" multiplier="373:18" id="B6j-zW-C3m"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Trademark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xao-u7-WnH">
-                                                <rect key="frame" x="29" y="363" width="337.5" height="16"/>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Video Call Princess  is trademark of HappiestApps, Inc. Unauthorized use, disclosure or reproduction is strictly prohibited." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="qfC-Ao-Ona">
-                                                <rect key="frame" x="29" y="389" width="337.5" height="49"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="qfC-Ao-Ona" secondAttribute="height" multiplier="373:54" id="bjt-YP-YWf"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="AboutUsImg" translatesAutoresizingMaskIntoConstraints="NO" id="T4A-WH-KLm">
-                                                <rect key="frame" x="163" y="35" width="70" height="70"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="cOW-8t-03t"/>
-                                                    <constraint firstAttribute="width" secondItem="T4A-WH-KLm" secondAttribute="height" multiplier="1:1" id="sjh-R1-4U7"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgw-IS-pyK">
-                                                <rect key="frame" x="29" y="195" width="189.5" height="27.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="bgw-IS-pyK" secondAttribute="height" multiplier="69:10" id="Vsv-UO-2wU"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
-                                                <state key="normal" title="http://www.happiestapps.com">
-                                                    <color key="titleColor" red="0.51764705879999995" green="0.75294117650000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Video Call Princess" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pC1-r2-i4k">
-                                                <rect key="frame" x="85" y="113" width="225" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="dge-9l-Q0S"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="34"/>
-                                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0Z-eH-qxz">
-                                                <rect key="frame" x="29" y="314" width="293.5" height="27.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="t0Z-eH-qxz" secondAttribute="height" multiplier="107:10" id="NT7-NR-u65"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                                <state key="normal" title="http://www.videocallprincess.com/privacy-policy">
-                                                    <color key="titleColor" red="0.51764705879999995" green="0.75294117650000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="bgw-IS-pyK" firstAttribute="width" secondItem="bgw-IS-pyK" secondAttribute="height" multiplier="69:10" id="1eZ-iP-DFS"/>
-                                            <constraint firstItem="xao-u7-WnH" firstAttribute="top" secondItem="t0Z-eH-qxz" secondAttribute="bottom" constant="22" id="30M-3J-YNm"/>
-                                            <constraint firstItem="qfC-Ao-Ona" firstAttribute="width" secondItem="qfC-Ao-Ona" secondAttribute="height" multiplier="373:54" id="4t1-8i-ujz"/>
-                                            <constraint firstItem="bgw-IS-pyK" firstAttribute="leading" secondItem="P4C-4F-2jL" secondAttribute="leading" id="7Az-1s-xEH"/>
-                                            <constraint firstItem="T4A-WH-KLm" firstAttribute="width" secondItem="T4A-WH-KLm" secondAttribute="height" multiplier="1:1" id="9tr-Bj-1DK"/>
-                                            <constraint firstItem="N9m-T1-hmc" firstAttribute="leading" secondItem="qfC-Ao-Ona" secondAttribute="leading" id="BQO-cO-upj"/>
-                                            <constraint firstItem="pC1-r2-i4k" firstAttribute="top" secondItem="T4A-WH-KLm" secondAttribute="bottom" constant="8" id="Blp-e8-6in"/>
-                                            <constraint firstItem="P4C-4F-2jL" firstAttribute="top" secondItem="pC1-r2-i4k" secondAttribute="bottom" constant="15" id="Csv-1o-r3d"/>
-                                            <constraint firstItem="Flh-qk-t1Y" firstAttribute="top" secondItem="bgw-IS-pyK" secondAttribute="bottom" constant="22" id="EOx-in-kPD"/>
-                                            <constraint firstItem="t0Z-eH-qxz" firstAttribute="width" secondItem="t0Z-eH-qxz" secondAttribute="height" multiplier="107:10" id="Jc5-bk-AdO"/>
-                                            <constraint firstItem="N9m-T1-hmc" firstAttribute="top" secondItem="qfC-Ao-Ona" secondAttribute="bottom" constant="30" id="Jee-0E-Pde"/>
-                                            <constraint firstItem="bgw-IS-pyK" firstAttribute="top" secondItem="P4C-4F-2jL" secondAttribute="bottom" multiplier="0.895" id="LcQ-E7-dRo"/>
-                                            <constraint firstItem="qfC-Ao-Ona" firstAttribute="top" secondItem="xao-u7-WnH" secondAttribute="bottom" constant="10" id="Oaj-BO-mBr"/>
-                                            <constraint firstItem="Flh-qk-t1Y" firstAttribute="width" secondItem="Flh-qk-t1Y" secondAttribute="height" multiplier="373:18" id="Ven-4n-wwn"/>
-                                            <constraint firstItem="bgw-IS-pyK" firstAttribute="width" secondItem="bgw-IS-pyK" secondAttribute="height" multiplier="69:10" id="W3o-6J-5Tv"/>
-                                            <constraint firstItem="Flh-qk-t1Y" firstAttribute="width" secondItem="Flh-qk-t1Y" secondAttribute="height" multiplier="373:18" id="XIp-cY-5no"/>
-                                            <constraint firstItem="ZOr-rg-frb" firstAttribute="width" secondItem="ZOr-rg-frb" secondAttribute="height" multiplier="373:54" id="Xkt-BU-1FT"/>
-                                            <constraint firstItem="T4A-WH-KLm" firstAttribute="width" secondItem="T4A-WH-KLm" secondAttribute="height" multiplier="1:1" id="buc-kg-xss"/>
-                                            <constraint firstItem="t0Z-eH-qxz" firstAttribute="width" secondItem="t0Z-eH-qxz" secondAttribute="height" multiplier="107:10" id="e83-YQ-HEg"/>
-                                            <constraint firstItem="ZOr-rg-frb" firstAttribute="width" secondItem="ZOr-rg-frb" secondAttribute="height" multiplier="373:54" id="edh-yp-jL8"/>
-                                            <constraint firstItem="t0Z-eH-qxz" firstAttribute="top" secondItem="ZOr-rg-frb" secondAttribute="bottom" multiplier="0.98" id="iZJ-n8-KHV"/>
-                                            <constraint firstItem="xao-u7-WnH" firstAttribute="height" secondItem="Flh-qk-t1Y" secondAttribute="height" id="j62-qh-Rmq"/>
-                                            <constraint firstItem="qfC-Ao-Ona" firstAttribute="width" secondItem="qfC-Ao-Ona" secondAttribute="height" multiplier="373:54" id="ksK-mr-w3s"/>
-                                            <constraint firstItem="xao-u7-WnH" firstAttribute="width" secondItem="Flh-qk-t1Y" secondAttribute="width" id="ntN-DL-oa1"/>
-                                            <constraint firstItem="xao-u7-WnH" firstAttribute="centerX" secondItem="Flh-qk-t1Y" secondAttribute="centerX" id="ogP-nk-Ud5"/>
-                                            <constraint firstItem="t0Z-eH-qxz" firstAttribute="leading" secondItem="ZOr-rg-frb" secondAttribute="leading" id="ri4-bE-AFl"/>
-                                            <constraint firstItem="ZOr-rg-frb" firstAttribute="top" secondItem="Flh-qk-t1Y" secondAttribute="bottom" constant="10" id="rlb-CR-zNK"/>
-                                            <constraint firstItem="P4C-4F-2jL" firstAttribute="width" secondItem="P4C-4F-2jL" secondAttribute="height" multiplier="373:54" id="y8h-v6-8yO"/>
-                                            <constraint firstItem="P4C-4F-2jL" firstAttribute="width" secondItem="P4C-4F-2jL" secondAttribute="height" multiplier="373:54" id="zAe-SV-B6p"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="8DO-UB-xyN" secondAttribute="bottom" id="1xb-Se-1x9"/>
-                                    <constraint firstItem="8DO-UB-xyN" firstAttribute="top" secondItem="hMt-uY-Qat" secondAttribute="top" id="k5D-9I-QSQ"/>
-                                    <constraint firstItem="8DO-UB-xyN" firstAttribute="leading" secondItem="hMt-uY-Qat" secondAttribute="leading" id="tOu-iG-GYZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="8DO-UB-xyN" secondAttribute="trailing" id="u0D-Zf-rI6"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="hMt-uY-Qat" firstAttribute="trailing" secondItem="HAB-QC-vq4" secondAttribute="trailing" id="3Fh-9n-avP"/>
-                            <constraint firstItem="hMt-uY-Qat" firstAttribute="leading" secondItem="HAB-QC-vq4" secondAttribute="leading" id="3p0-Qg-Afv"/>
-                            <constraint firstItem="hMt-uY-Qat" firstAttribute="top" secondItem="HAB-QC-vq4" secondAttribute="top" id="AXB-wL-Qr7"/>
-                            <constraint firstItem="8DO-UB-xyN" firstAttribute="height" secondItem="9Xf-z0-3fM" secondAttribute="height" priority="250" constant="1" id="S4u-yV-tqI"/>
-                            <constraint firstAttribute="bottom" secondItem="hMt-uY-Qat" secondAttribute="bottom" id="Urj-VE-2oF"/>
-                            <constraint firstItem="8DO-UB-xyN" firstAttribute="width" secondItem="9Xf-z0-3fM" secondAttribute="width" id="sGo-Zj-LQP"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="HAB-QC-vq4"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="About Us" id="FPP-tY-f3Z"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hdF-ln-1Tz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3359" y="1471"/>
-        </scene>
         <!--Why our App is Safe-->
         <scene sceneID="l5g-oS-AOT">
             <objects>
@@ -1232,7 +1067,7 @@ For more details, please visit our Privacy Policy page:</string>
                                         <rect key="frame" x="10" y="794" width="224" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                        <state key="normal" title="http://www.happiestapps.com">
+                                        <state key="normal" title="http://www.videocallprincess.com">
                                             <color key="titleColor" red="0.51764705879999995" green="0.75294117650000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
@@ -1301,14 +1136,14 @@ and we NEVER collect data from you!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0T-oI-6RI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4039" y="1471"/>
+            <point key="canvasLocation" x="3359" y="1469"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="5Oy-n4-QQs">
             <objects>
                 <tableViewController id="Qgr-jn-tu0" customClass="SettingsViewController" customModule="Ice_Princess" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gKS-lg-eme">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="750"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="ppV-0A-b6x">
@@ -1326,62 +1161,92 @@ and we NEVER collect data from you!</string>
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="73.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tl9-hE-NZv">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tl9-hE-NZv">
                                                     <rect key="frame" x="345" y="21.333333333333329" width="51" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="IYJ-lF-jL7"/>
+                                                    </constraints>
                                                     <connections>
                                                         <action selector="recordingSwitch:" destination="Qgr-jn-tu0" eventType="valueChanged" id="a98-Vh-NBg"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Activate Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="mC0-cQ-XTd">
-                                                    <rect key="frame" x="20" y="11" width="164" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Activate Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mC0-cQ-XTd">
+                                                    <rect key="frame" x="20" y="15.999999999999998" width="165" height="24.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="mC0-cQ-XTd" secondAttribute="height" multiplier="41:6" id="D56-kS-fpw"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Turn on to save princess conversations " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="iUA-N9-815" customClass="LabelSmallFontSize" customModule="Ice_Princess" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="40" width="286" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Turn on to save princess conversations " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="iUA-N9-815" customClass="LabelSmallFontSize" customModule="Ice_Princess" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="45.333333333333336" width="256.33333333333331" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="iUA-N9-815" secondAttribute="height" multiplier="15:1" id="PdN-kW-7eC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="74" id="dO7-iL-YG0">
-                                        <rect key="frame" x="0.0" y="74" width="414" height="74"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dO7-iL-YG0" id="QqX-tH-RxJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="73.666666666666671"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="2Dh-eV-td7">
-                                                    <rect key="frame" x="20" y="24" width="82" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tl9-hE-NZv" firstAttribute="leading" secondItem="iUA-N9-815" secondAttribute="trailing" multiplier="1.22" constant="8" symbolic="YES" id="2lj-H2-GUA"/>
+                                                <constraint firstItem="mC0-cQ-XTd" firstAttribute="top" secondItem="pGd-wD-XYC" secondAttribute="topMargin" constant="5" id="95X-Zf-Sf2"/>
+                                                <constraint firstItem="tl9-hE-NZv" firstAttribute="centerY" secondItem="pGd-wD-XYC" secondAttribute="centerY" id="BjE-ru-q88"/>
+                                                <constraint firstItem="tl9-hE-NZv" firstAttribute="trailing" secondItem="pGd-wD-XYC" secondAttribute="trailingMargin" id="CXk-Iv-BnL"/>
+                                                <constraint firstItem="tl9-hE-NZv" firstAttribute="leading" secondItem="mC0-cQ-XTd" secondAttribute="trailing" multiplier="1.82" constant="8" symbolic="YES" id="LcT-VG-X03"/>
+                                                <constraint firstItem="mC0-cQ-XTd" firstAttribute="leading" secondItem="pGd-wD-XYC" secondAttribute="leadingMargin" id="WC0-cI-2E1"/>
+                                                <constraint firstItem="iUA-N9-815" firstAttribute="leading" secondItem="pGd-wD-XYC" secondAttribute="leadingMargin" id="jS8-P6-bbH"/>
+                                                <constraint firstItem="iUA-N9-815" firstAttribute="top" secondItem="mC0-cQ-XTd" secondAttribute="bottom" constant="5" id="vnp-Um-2lv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="74" id="ah8-v8-BT5">
-                                        <rect key="frame" x="0.0" y="148" width="414" height="74"/>
+                                        <rect key="frame" x="0.0" y="74" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ah8-v8-BT5" id="XqS-by-zIx" customClass="LabelFontSize" customModule="Ice_Princess" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="73.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Why our App is Safe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5vQ-bl-oXa">
-                                                    <rect key="frame" x="20" y="22.333333333333258" width="176" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Why our App is Safe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5vQ-bl-oXa">
+                                                    <rect key="frame" x="20" y="24.666666666666671" width="176.66666666666666" height="24.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="5vQ-bl-oXa" secondAttribute="height" multiplier="22:3" id="boW-I3-nnn"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5vQ-bl-oXa" secondAttribute="trailing" multiplier="1.87" id="5lp-5R-4Bt"/>
+                                                <constraint firstItem="5vQ-bl-oXa" firstAttribute="centerY" secondItem="XqS-by-zIx" secondAttribute="centerY" id="YYF-mL-Oqi"/>
+                                                <constraint firstItem="5vQ-bl-oXa" firstAttribute="leading" secondItem="XqS-by-zIx" secondAttribute="leadingMargin" id="k5c-6e-5U2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="74" id="qja-vl-OkN">
+                                        <rect key="frame" x="0.0" y="148" width="414" height="74"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qja-vl-OkN" id="8QT-zs-s2g" customClass="LabelFontSize" customModule="Ice_Princess" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="73.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Rate us on the App Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-8a-LKo">
+                                                    <rect key="frame" x="20" y="22" width="216" height="29.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="d3M-8a-LKo" secondAttribute="height" multiplier="22:3" id="Wz3-Uc-u7K"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d3M-8a-LKo" firstAttribute="leading" secondItem="8QT-zs-s2g" secondAttribute="leadingMargin" id="YM3-FF-7hr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="d3M-8a-LKo" secondAttribute="trailing" multiplier="1.56" id="cBt-KH-mvz"/>
+                                                <constraint firstItem="d3M-8a-LKo" firstAttribute="centerY" secondItem="8QT-zs-s2g" secondAttribute="centerY" id="nfK-8M-a45"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="74" id="fvZ-YP-2Gg">
@@ -1391,14 +1256,21 @@ and we NEVER collect data from you!</string>
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="73.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Like us on Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="8vF-u8-rNN">
-                                                    <rect key="frame" x="20" y="22.333333333333258" width="177" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Like us on Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8vF-u8-rNN">
+                                                    <rect key="frame" x="20" y="24.666666666666671" width="178" height="24.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="8vF-u8-rNN" secondAttribute="height" multiplier="59:8" id="sry-hU-f7X"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8vF-u8-rNN" firstAttribute="leading" secondItem="hHF-zg-FCd" secondAttribute="leadingMargin" id="Pvg-bu-A7G"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8vF-u8-rNN" secondAttribute="trailing" multiplier="1.86" id="iEi-cp-xPm"/>
+                                                <constraint firstItem="8vF-u8-rNN" firstAttribute="centerY" secondItem="hHF-zg-FCd" secondAttribute="centerY" id="iLA-9h-CX9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -1422,11 +1294,11 @@ and we NEVER collect data from you!</string>
             <objects>
                 <viewController id="lXh-pe-ccm" customClass="RecordingsViewController" customModule="Ice_Princess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SD8-w5-Fk1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="750"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1kn-nj-aF1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="750"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecordingsCell" rowHeight="475" id="HeO-V6-XaD" customClass="RecordingsTableViewCell" customModule="Ice_Princess" customModuleProvider="target">
@@ -1453,7 +1325,7 @@ and we NEVER collect data from you!</string>
                                                     </constraints>
                                                 </stackView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="HT2-Sn-I4O">
-                                                    <rect key="frame" x="29.999999999999996" y="320.33333333333331" width="45.666666666666657" height="21"/>
+                                                    <rect key="frame" x="30" y="316" width="55" height="25.333333333333314"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="HT2-Sn-I4O" secondAttribute="height" multiplier="46:21" id="hIG-4K-5cH"/>
                                                     </constraints>
@@ -1462,7 +1334,7 @@ and we NEVER collect data from you!</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0Wd-sb-yen">
-                                                    <rect key="frame" x="338.33333333333331" y="320.33333333333331" width="45.666666666666686" height="21"/>
+                                                    <rect key="frame" x="329" y="316" width="55" height="25.333333333333314"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="0Wd-sb-yen" secondAttribute="height" multiplier="46:21" id="ljp-2M-YHt"/>
                                                     </constraints>
@@ -1506,7 +1378,7 @@ and we NEVER collect data from you!</string>
                                                     </constraints>
                                                 </stackView>
                                                 <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lN4-xw-78h">
-                                                    <rect key="frame" x="93" y="329.66666666666669" width="228" height="2"/>
+                                                    <rect key="frame" x="93" y="327.66666666666669" width="228" height="2"/>
                                                 </progressView>
                                             </subviews>
                                             <constraints>
@@ -1515,8 +1387,9 @@ and we NEVER collect data from you!</string>
                                                 <constraint firstItem="HT2-Sn-I4O" firstAttribute="leading" secondItem="Ubu-37-hY4" secondAttribute="leadingMargin" constant="10" id="6jd-9B-IVy"/>
                                                 <constraint firstItem="XXB-eo-Fp7" firstAttribute="centerX" secondItem="Ubu-37-hY4" secondAttribute="centerX" id="9wz-e4-qyy"/>
                                                 <constraint firstAttribute="bottom" secondItem="psk-7E-s5z" secondAttribute="bottom" constant="20" symbolic="YES" id="GdL-ED-jdo"/>
-                                                <constraint firstItem="HT2-Sn-I4O" firstAttribute="width" secondItem="Ubu-37-hY4" secondAttribute="width" multiplier="0.11" id="I3g-wv-sO1"/>
                                                 <constraint firstItem="XXB-eo-Fp7" firstAttribute="top" secondItem="Ubu-37-hY4" secondAttribute="top" constant="20" symbolic="YES" id="KmM-Uf-CWL"/>
+                                                <constraint firstItem="lN4-xw-78h" firstAttribute="leading" secondItem="HT2-Sn-I4O" secondAttribute="trailing" constant="8" symbolic="YES" id="MFi-oo-DLg"/>
+                                                <constraint firstItem="0Wd-sb-yen" firstAttribute="leading" secondItem="lN4-xw-78h" secondAttribute="trailing" constant="8" symbolic="YES" id="Yqy-IQ-eO8"/>
                                                 <constraint firstItem="lN4-xw-78h" firstAttribute="width" secondItem="Ubu-37-hY4" secondAttribute="width" multiplier="0.55" id="bwF-1F-ecP"/>
                                                 <constraint firstItem="psk-7E-s5z" firstAttribute="centerX" secondItem="Ubu-37-hY4" secondAttribute="centerX" id="ejy-j8-qdg"/>
                                                 <constraint firstItem="XXB-eo-Fp7" firstAttribute="width" secondItem="Ubu-37-hY4" secondAttribute="width" multiplier="0.9" id="kx0-cM-8bC"/>
@@ -1524,7 +1397,6 @@ and we NEVER collect data from you!</string>
                                                 <constraint firstItem="XXB-eo-Fp7" firstAttribute="bottom" secondItem="0Wd-sb-yen" secondAttribute="bottom" constant="10" id="n0c-AL-22G"/>
                                                 <constraint firstItem="psk-7E-s5z" firstAttribute="top" secondItem="XXB-eo-Fp7" secondAttribute="bottom" constant="8" symbolic="YES" id="n8k-52-Z5c"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0Wd-sb-yen" secondAttribute="trailing" constant="10" id="pgj-I2-Bwp"/>
-                                                <constraint firstItem="0Wd-sb-yen" firstAttribute="width" secondItem="Ubu-37-hY4" secondAttribute="width" multiplier="0.11" id="re1-SQ-VVx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1544,10 +1416,10 @@ and we NEVER collect data from you!</string>
                                 </connections>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZr-2h-2T6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="750"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Recordings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkg-cM-bba">
-                                        <rect key="frame" x="130.66666666666666" y="360.66666666666669" width="152.99999999999997" height="29"/>
+                                        <rect key="frame" x="130.66666666666666" y="362.66666666666669" width="152.99999999999997" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.82739323379999996" green="0.83151024579999999" blue="0.8380221725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1584,7 +1456,6 @@ and we NEVER collect data from you!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="AboutUsImg" width="1075" height="1075"/>
         <image name="ArrowLeft" width="261" height="489"/>
         <image name="ArrowRight" width="261" height="489"/>
         <image name="Call" width="530" height="530"/>

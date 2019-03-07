@@ -1,11 +1,14 @@
 import UIKit
 
-class ParentsOnlyViewController: UIViewController, SegueHandler{
+class ParentsOnlyViewController: UIViewController, SegueHandler {
     
     //MARK: - Constants
     private struct Storyboard {
         static let ShowSettingsSegueIdentifier = "ShowSettings"
     }
+    
+    //MARK: - Properties
+    weak var delegate: PauseVideoDelegate?
     
     //MARK: - Outlets
     @IBOutlet weak var personalizeView: UIView!
@@ -38,10 +41,12 @@ class ParentsOnlyViewController: UIViewController, SegueHandler{
             recordingsView.isHidden = true
             personalizeView.isHidden = false
             settingsView.isHidden = true
+            delegate?.pauseVideo()
         case 2:
             recordingsView.isHidden = true
             personalizeView.isHidden = true
             settingsView.isHidden = false
+            delegate?.pauseVideo()
         default:
             break;
         }

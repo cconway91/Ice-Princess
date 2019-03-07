@@ -69,7 +69,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Princess!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ah3-SN-pHu">
-                                <rect key="frame" x="41.333333333333343" y="148" width="331.33333333333326" height="90.666666666666686"/>
+                                <rect key="frame" x="20.666666666666657" y="148" width="372.66666666666674" height="102.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ah3-SN-pHu" secondAttribute="height" multiplier="361:99" id="PyB-fu-EFD"/>
                                 </constraints>
@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjt-T8-GgL" customClass="RoundBtn" customModule="Ice_Princess" customModuleProvider="target">
-                                <rect key="frame" x="41.333333333333343" y="662" width="331.33333333333326" height="51"/>
+                                <rect key="frame" x="20.666666666666657" y="649.33333333333337" width="372.66666666666674" height="57.333333333333371"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.54117647059999996" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pjt-T8-GgL" secondAttribute="height" multiplier="124:19" id="tHJ-SC-2bD"/>
@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNk-rA-3tb" customClass="RoundBtn" customModule="Ice_Princess" customModuleProvider="target">
-                                <rect key="frame" x="41.333333333333343" y="733" width="331.33333333333326" height="50.666666666666629"/>
+                                <rect key="frame" x="20.666666666666657" y="726.66666666666663" width="372.66666666666674" height="57"/>
                                 <color key="backgroundColor" red="0.51764705879999995" green="0.75294117650000003" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LNk-rA-3tb" secondAttribute="height" multiplier="124:19" id="i4M-Hf-hew"/>
@@ -110,16 +110,16 @@
                         <constraints>
                             <constraint firstItem="ihu-bb-1We" firstAttribute="centerX" secondItem="SfO-Bt-i3A" secondAttribute="centerX" id="4HX-cO-58T"/>
                             <constraint firstItem="Ah3-SN-pHu" firstAttribute="top" secondItem="nAN-gk-lBs" secondAttribute="top" constant="60" id="AJ3-Ct-dTR"/>
-                            <constraint firstItem="pjt-T8-GgL" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="0.8" id="B1c-VJ-gWK"/>
+                            <constraint firstItem="pjt-T8-GgL" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="0.9" id="B1c-VJ-gWK"/>
                             <constraint firstItem="Ah3-SN-pHu" firstAttribute="centerX" secondItem="SfO-Bt-i3A" secondAttribute="centerX" id="GKh-0P-Oau"/>
-                            <constraint firstItem="LNk-rA-3tb" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="0.8" id="JSH-wR-Wdb"/>
+                            <constraint firstItem="LNk-rA-3tb" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="0.9" id="JSH-wR-Wdb"/>
                             <constraint firstItem="nAN-gk-lBs" firstAttribute="bottom" secondItem="LNk-rA-3tb" secondAttribute="bottom" multiplier="1.1" id="ToD-se-pxV"/>
                             <constraint firstItem="ihu-bb-1We" firstAttribute="centerY" secondItem="SfO-Bt-i3A" secondAttribute="centerY" id="Yve-Ow-GBV"/>
                             <constraint firstItem="LNk-rA-3tb" firstAttribute="top" secondItem="pjt-T8-GgL" secondAttribute="bottom" constant="20" id="aUD-a0-aKl"/>
                             <constraint firstItem="ihu-bb-1We" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="1.3" id="egz-GT-0Yj"/>
                             <constraint firstItem="LNk-rA-3tb" firstAttribute="centerX" secondItem="SfO-Bt-i3A" secondAttribute="centerX" id="pf9-Nw-TXb"/>
                             <constraint firstItem="pjt-T8-GgL" firstAttribute="centerX" secondItem="SfO-Bt-i3A" secondAttribute="centerX" id="tqy-Pl-FxR"/>
-                            <constraint firstItem="Ah3-SN-pHu" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="0.8" id="uVh-ry-wWu"/>
+                            <constraint firstItem="Ah3-SN-pHu" firstAttribute="width" secondItem="SfO-Bt-i3A" secondAttribute="width" multiplier="0.9" id="uVh-ry-wWu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nAN-gk-lBs"/>
                     </view>
@@ -253,7 +253,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGD-CB-yiX" customClass="RoundView" customModule="Ice_Princess" customModuleProvider="target">
                                 <rect key="frame" x="20.666666666666657" y="133.66666666666663" width="372.66666666666674" height="128.33333333333337"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrincessPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="AnQ-dP-npO">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Introduction" translatesAutoresizingMaskIntoConstraints="NO" id="AnQ-dP-npO">
                                         <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="128.33333333333334"/>
                                     </imageView>
                                     <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHM-7t-grv">
@@ -284,7 +284,7 @@
                                             <constraint firstAttribute="width" secondItem="bdg-z2-cpS" secondAttribute="height" multiplier="1:1" id="kIt-tt-4iY"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrincessPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="aNK-kU-Tde" customClass="CircleImgWithBoarder" customModule="Ice_Princess" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Introduction" translatesAutoresizingMaskIntoConstraints="NO" id="aNK-kU-Tde" customClass="CircleImgWithBoarder" customModule="Ice_Princess" customModuleProvider="target">
                                         <rect key="frame" x="273" y="19.33333333333335" width="89.666666666666686" height="89.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="aNK-kU-Tde" secondAttribute="height" multiplier="1:1" id="WF8-AZ-ieR"/>
@@ -355,7 +355,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Parents Only" id="tk5-Jq-6rS"/>
                     <connections>
+                        <outlet property="backgroundPrincessPhoto" destination="AnQ-dP-npO" id="z6h-VM-dPD"/>
                         <outlet property="episodeView" destination="aGD-CB-yiX" id="GYH-SF-ZOc"/>
+                        <outlet property="previewBottomLbl" destination="nAz-9z-14x" id="znX-lg-mPB"/>
+                        <outlet property="previewTitleLbl" destination="vQY-9t-ORX" id="XUl-pl-PYs"/>
+                        <outlet property="princessPhoto" destination="aNK-kU-Tde" id="rBW-Fu-Pll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuC-jR-aKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -402,7 +406,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrincessPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="QKP-0J-CDh" customClass="CircleImg" customModule="Ice_Princess" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Introduction" translatesAutoresizingMaskIntoConstraints="NO" id="QKP-0J-CDh" customClass="CircleImg" customModule="Ice_Princess" customModuleProvider="target">
                                 <rect key="frame" x="325.33333333333331" y="140.66666666666666" width="68.666666666666686" height="68.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QKP-0J-CDh" secondAttribute="height" multiplier="1:1" id="qS0-sQ-UQz"/>
@@ -596,7 +600,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="109.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrincessPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="o7I-HW-Nqc" customClass="CircleImg" customModule="Ice_Princess" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Introduction" translatesAutoresizingMaskIntoConstraints="NO" id="o7I-HW-Nqc" customClass="CircleImg" customModule="Ice_Princess" customModuleProvider="target">
                                                     <rect key="frame" x="311.33333333333331" y="13.333333333333336" width="82.666666666666686" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="o7I-HW-Nqc" secondAttribute="height" multiplier="1:1" id="LiW-lu-SRv"/>
@@ -675,7 +679,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="109.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrincessPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-cC-ghb" customClass="CircleImg" customModule="Ice_Princess" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBirthday" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-cC-ghb" customClass="CircleImg" customModule="Ice_Princess" customModuleProvider="target">
                                                     <rect key="frame" x="311.33333333333331" y="13.333333333333336" width="82.666666666666686" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="SdQ-cC-ghb" secondAttribute="height" multiplier="1:1" id="peb-da-tAr"/>
@@ -968,150 +972,202 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-dH-vKr">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="897"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1D2-WE-GT4">
-                                        <rect key="frame" x="41" y="717" width="1" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Call" translatesAutoresizingMaskIntoConstraints="NO" id="2zo-pk-Xou">
-                                        <rect key="frame" x="10" y="310" width="62.5" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To find out more or to send us any inquiries, visit us at:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="CIQ-Zv-gi2">
-                                        <rect key="frame" x="10" y="773" width="373" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wed-HL-jsu">
-                                        <rect key="frame" x="41" y="490" width="1" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Safe" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-Wf-49t">
-                                        <rect key="frame" x="161" y="10" width="70" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Spy" translatesAutoresizingMaskIntoConstraints="NO" id="H1y-mV-r1U">
-                                        <rect key="frame" x="10" y="424" width="62.5" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-zK-Kw7">
-                                        <rect key="frame" x="96" y="442" width="286.5" height="71"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">All our video call episodes are pre-recorded. Nothing is live, and no one real is looking at your kids or talking to them
-</string>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Gd-GB-lYu">
-                                        <rect key="frame" x="10" y="161" width="373" height="107"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">As parents ourselves, we are dedicated to making safe apps for kids of all ages. We understand how difficult it can be to find trustworthy apps, which is why we have designed this app as if our own children were using it. Please rest assued that Video Call Princess is 100% safe.
-</string>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Recording" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-Sp-PEX">
-                                        <rect key="frame" x="10" y="537" width="62.5" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="aKi-P2-Wt2">
-                                        <rect key="frame" x="96" y="664" width="286.5" height="72"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">We never collect or share your data. Therefore, we will never send out any marketing calls or texts.
-</string>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nwx-g6-uW4">
-                                        <rect key="frame" x="41" y="275" width="1" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your information is not collected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="sza-xe-nog">
-                                        <rect key="frame" x="96" y="638" width="255" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4C-DT-In3">
-                                        <rect key="frame" x="41" y="603" width="1" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1My-ik-8fO">
-                                        <rect key="frame" x="41" y="376" width="1" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We cannot spy on you" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="b1w-A7-WdW">
-                                        <rect key="frame" x="96" y="411" width="176" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Information" translatesAutoresizingMaskIntoConstraints="NO" id="JKt-y7-tu6">
-                                        <rect key="frame" x="10" y="651" width="62.5" height="62.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5U-rL-qnJ">
-                                        <rect key="frame" x="10" y="794" width="224" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                        <state key="normal" title="http://www.videocallprincess.com">
-                                            <color key="titleColor" red="0.51764705879999995" green="0.75294117650000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="LIp-gM-E5G">
-                                        <rect key="frame" x="20" y="99" width="352" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Our App is Safe
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="LIp-gM-E5G">
+                                                <rect key="frame" x="37.333333333333343" y="92" width="339.33333333333326" height="47.333333333333343"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LIp-gM-E5G" secondAttribute="height" multiplier="335:47" id="WR4-Hk-86n"/>
+                                                </constraints>
+                                                <string key="text">Our App is Safe
 and we NEVER collect data from you!</string>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="22"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="GS7-Yo-UUC">
-                                        <rect key="frame" x="96" y="321" width="286.5" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">We only ask for camera and microphone permission so your kids can appear on the chat screen and your video call can be recorded.
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="20"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="2Gd-GB-lYu">
+                                                <rect key="frame" x="20" y="149.33333333333334" width="372.66666666666669" height="101"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2Gd-GB-lYu" secondAttribute="height" multiplier="362:98" id="SoX-sI-7JE"/>
+                                                </constraints>
+                                                <string key="text">As parents ourselves, we are dedicated to making safe apps for kids of all ages. We understand how difficult it can be to find trustworthy apps, which is why we have designed this app as if our own children were using it. Please rest assued that our app is 100% safe.
 </string>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Video calls are not real" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="omW-hF-09N">
-                                        <rect key="frame" x="96" y="290" width="176" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recordings are only for you" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="JM1-Ps-CVx">
-                                        <rect key="frame" x="96" y="526" width="215.5" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="18"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="iR0-hp-LAy">
-                                        <rect key="frame" x="96" y="552" width="286.5" height="72"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">We never have access to your conversation recordings. Feel free to save and share your videos however you wish.
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wed-HL-jsu">
+                                                <rect key="frame" x="50.666666666666664" y="474.66666666666663" width="1" height="40"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="OTO-vd-6hJ"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Rog-Xb-8yk"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call" translatesAutoresizingMaskIntoConstraints="NO" id="2zo-pk-Xou">
+                                                <rect key="frame" x="20" y="280.33333333333331" width="62" height="62"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2zo-pk-Xou" secondAttribute="height" multiplier="1:1" id="2Ed-uX-6jk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To find out more or to send us any inquiries, visit us at our website http://www.videocallprincess.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="CIQ-Zv-gi2">
+                                                <rect key="frame" x="20" y="636.66666666666663" width="372.66666666666669" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CIQ-Zv-gi2" secondAttribute="height" multiplier="31:3" id="4w0-uv-Sq9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safe" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-Wf-49t">
+                                                <rect key="frame" x="176" y="10" width="62" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="S5r-Wf-49t" secondAttribute="height" multiplier="70:81" id="57a-Dx-l3g"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spy" translatesAutoresizingMaskIntoConstraints="NO" id="H1y-mV-r1U">
+                                                <rect key="frame" x="20" y="402.33333333333331" width="62" height="62.333333333333314"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-zK-Kw7">
+                                                <rect key="frame" x="92" y="429.66666666666663" width="300.66666666666669" height="67.333333333333314"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="uHg-zK-Kw7" secondAttribute="height" multiplier="300:67" id="y2M-tA-Avv"/>
+                                                </constraints>
+                                                <string key="text">All our video call episodes are pre-recorded. Nothing is live, and no one real is looking at your kids or talking to them
 </string>
-                                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
-                                        <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recording" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-Sp-PEX">
+                                                <rect key="frame" x="20" y="524.66666666666663" width="62" height="62"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4C-DT-In3">
+                                                <rect key="frame" x="50.666666666666664" y="250.33333333333331" width="1" height="20"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="OzA-xj-fpf"/>
+                                                    <constraint firstAttribute="height" constant="20" id="gyl-bi-mQ3"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1My-ik-8fO">
+                                                <rect key="frame" x="50.666666666666664" y="352.33333333333331" width="1" height="40"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="0G3-cH-e0h"/>
+                                                    <constraint firstAttribute="width" constant="1" id="D1L-ab-B7b"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We cannot spy on you" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="b1w-A7-WdW">
+                                                <rect key="frame" x="91.999999999999986" y="402.33333333333331" width="181.66666666666663" height="22.333333333333314"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="b1w-A7-WdW" secondAttribute="height" multiplier="179:22" id="5s2-HF-glN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video calls are not real" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="omW-hF-09N">
+                                                <rect key="frame" x="92.000000000000014" y="280.33333333333331" width="185.33333333333337" height="22.333333333333314"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="omW-hF-09N" secondAttribute="height" multiplier="183:22" id="VZR-m9-v46"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordings are only for you" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="JM1-Ps-CVx">
+                                                <rect key="frame" x="92" y="524.66666666666663" width="226" height="22.333333333333371"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JM1-Ps-CVx" secondAttribute="height" multiplier="221:22" id="huG-ww-LVo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="iR0-hp-LAy">
+                                                <rect key="frame" x="92" y="552" width="300.66666666666669" height="68"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="iR0-hp-LAy" secondAttribute="height" multiplier="301:68" id="Wm7-gA-n5J"/>
+                                                </constraints>
+                                                <string key="text">We never have access to your conversation recordings. Feel free to save and share your videos however you wish.
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwx-g6-uW4">
+                                                <rect key="frame" x="50.666666666666664" y="596.66666666666663" width="1" height="20"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="j8F-Yt-uFj"/>
+                                                    <constraint firstAttribute="height" constant="20" id="rk6-cu-Y5d"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="GS7-Yo-UUC">
+                                                <rect key="frame" x="92" y="307.66666666666669" width="300.66666666666669" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GS7-Yo-UUC" secondAttribute="height" multiplier="10:3" id="uvn-Eg-7gw"/>
+                                                </constraints>
+                                                <string key="text">We only ask for camera and microphone permission so your kids can appear on the chat screen and your video call can be recorded.
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="1My-ik-8fO" firstAttribute="centerX" secondItem="2zo-pk-Xou" secondAttribute="centerX" id="1MG-oJ-TCe"/>
+                                            <constraint firstItem="H1y-mV-r1U" firstAttribute="height" secondItem="2zo-pk-Xou" secondAttribute="height" id="21X-ww-zaC"/>
+                                            <constraint firstItem="GS7-Yo-UUC" firstAttribute="top" secondItem="omW-hF-09N" secondAttribute="bottom" constant="5" id="4xp-u6-aXJ"/>
+                                            <constraint firstItem="S5r-Wf-49t" firstAttribute="centerX" secondItem="RG5-dH-vKr" secondAttribute="centerX" id="50C-kf-TTa"/>
+                                            <constraint firstItem="iR0-hp-LAy" firstAttribute="top" secondItem="JM1-Ps-CVx" secondAttribute="bottom" constant="5" id="5YD-ZB-gNe"/>
+                                            <constraint firstItem="JM1-Ps-CVx" firstAttribute="top" secondItem="4Qj-Sp-PEX" secondAttribute="top" id="7o8-d6-Za9"/>
+                                            <constraint firstItem="4Qj-Sp-PEX" firstAttribute="height" secondItem="H1y-mV-r1U" secondAttribute="height" id="ABB-VZ-I7M"/>
+                                            <constraint firstItem="s4C-DT-In3" firstAttribute="centerX" secondItem="2zo-pk-Xou" secondAttribute="centerX" id="AX5-3b-w5K"/>
+                                            <constraint firstItem="Nwx-g6-uW4" firstAttribute="centerX" secondItem="4Qj-Sp-PEX" secondAttribute="centerX" id="Aeq-Kl-WKQ"/>
+                                            <constraint firstItem="2zo-pk-Xou" firstAttribute="top" secondItem="s4C-DT-In3" secondAttribute="bottom" constant="10" id="BV5-GY-RTW"/>
+                                            <constraint firstItem="LIp-gM-E5G" firstAttribute="centerX" secondItem="RG5-dH-vKr" secondAttribute="centerX" id="BcN-mw-uwn"/>
+                                            <constraint firstItem="CIQ-Zv-gi2" firstAttribute="top" secondItem="Nwx-g6-uW4" secondAttribute="bottom" constant="20" id="C7S-MJ-3pv"/>
+                                            <constraint firstItem="GS7-Yo-UUC" firstAttribute="leading" secondItem="omW-hF-09N" secondAttribute="leading" id="FS1-Wc-LDT"/>
+                                            <constraint firstItem="iR0-hp-LAy" firstAttribute="trailing" secondItem="uHg-zK-Kw7" secondAttribute="trailing" id="GT1-Ma-1mL"/>
+                                            <constraint firstAttribute="trailing" secondItem="omW-hF-09N" secondAttribute="trailing" multiplier="1.42" constant="20" symbolic="YES" id="JoZ-RT-aA3"/>
+                                            <constraint firstItem="uHg-zK-Kw7" firstAttribute="trailing" secondItem="GS7-Yo-UUC" secondAttribute="trailing" id="N5Q-fL-oa4"/>
+                                            <constraint firstItem="s4C-DT-In3" firstAttribute="top" secondItem="2Gd-GB-lYu" secondAttribute="bottom" id="NrE-9c-wXY"/>
+                                            <constraint firstItem="uHg-zK-Kw7" firstAttribute="leading" secondItem="b1w-A7-WdW" secondAttribute="leading" id="NwL-2A-cSO"/>
+                                            <constraint firstItem="4Qj-Sp-PEX" firstAttribute="centerX" secondItem="Wed-HL-jsu" secondAttribute="centerX" id="OCx-zd-cme"/>
+                                            <constraint firstItem="S5r-Wf-49t" firstAttribute="top" secondItem="RG5-dH-vKr" secondAttribute="top" constant="10" id="OM2-Gl-yXn"/>
+                                            <constraint firstItem="LIp-gM-E5G" firstAttribute="top" secondItem="S5r-Wf-49t" secondAttribute="bottom" constant="10" id="PR3-E5-GkL"/>
+                                            <constraint firstItem="CIQ-Zv-gi2" firstAttribute="leading" secondItem="4Qj-Sp-PEX" secondAttribute="leading" id="QjA-lz-eMM"/>
+                                            <constraint firstItem="H1y-mV-r1U" firstAttribute="width" secondItem="2zo-pk-Xou" secondAttribute="width" id="TK6-NS-yj9"/>
+                                            <constraint firstAttribute="trailing" secondItem="b1w-A7-WdW" secondAttribute="trailing" multiplier="1.44" constant="20" symbolic="YES" id="TfR-hF-XDQ"/>
+                                            <constraint firstItem="b1w-A7-WdW" firstAttribute="top" secondItem="H1y-mV-r1U" secondAttribute="top" id="VWi-lT-3FY"/>
+                                            <constraint firstItem="uHg-zK-Kw7" firstAttribute="top" secondItem="b1w-A7-WdW" secondAttribute="bottom" constant="5" id="WAn-Mk-6AT"/>
+                                            <constraint firstItem="2Gd-GB-lYu" firstAttribute="width" secondItem="RG5-dH-vKr" secondAttribute="width" multiplier="0.9" id="Y3r-a4-3BN"/>
+                                            <constraint firstItem="4Qj-Sp-PEX" firstAttribute="width" secondItem="H1y-mV-r1U" secondAttribute="width" id="aEW-Qm-7OB"/>
+                                            <constraint firstItem="JM1-Ps-CVx" firstAttribute="trailing" secondItem="uHg-zK-Kw7" secondAttribute="trailing" multiplier="0.81" id="aRZ-Gv-4yC"/>
+                                            <constraint firstItem="2zo-pk-Xou" firstAttribute="leading" secondItem="2Gd-GB-lYu" secondAttribute="leading" id="dZB-s6-XtQ"/>
+                                            <constraint firstItem="JM1-Ps-CVx" firstAttribute="leading" secondItem="uHg-zK-Kw7" secondAttribute="leading" id="dgq-u1-7vh"/>
+                                            <constraint firstItem="4Qj-Sp-PEX" firstAttribute="top" secondItem="Wed-HL-jsu" secondAttribute="bottom" constant="10" id="fDy-SF-nJU"/>
+                                            <constraint firstItem="Wed-HL-jsu" firstAttribute="top" secondItem="H1y-mV-r1U" secondAttribute="bottom" constant="10" id="fHa-F9-URf"/>
+                                            <constraint firstItem="omW-hF-09N" firstAttribute="leading" secondItem="2zo-pk-Xou" secondAttribute="trailing" constant="10" id="iev-8c-jwG"/>
+                                            <constraint firstItem="LIp-gM-E5G" firstAttribute="width" secondItem="RG5-dH-vKr" secondAttribute="width" multiplier="0.82" id="kbb-Nd-AKm"/>
+                                            <constraint firstItem="iR0-hp-LAy" firstAttribute="leading" secondItem="JM1-Ps-CVx" secondAttribute="leading" id="lNd-Si-Ofz"/>
+                                            <constraint firstItem="Wed-HL-jsu" firstAttribute="centerX" secondItem="H1y-mV-r1U" secondAttribute="centerX" id="nbB-V8-Gb4"/>
+                                            <constraint firstItem="Nwx-g6-uW4" firstAttribute="top" secondItem="4Qj-Sp-PEX" secondAttribute="bottom" constant="10" id="now-Qb-27e"/>
+                                            <constraint firstItem="2Gd-GB-lYu" firstAttribute="top" secondItem="LIp-gM-E5G" secondAttribute="bottom" constant="10" id="pqD-X0-iuA"/>
+                                            <constraint firstItem="1My-ik-8fO" firstAttribute="top" secondItem="2zo-pk-Xou" secondAttribute="bottom" constant="10" id="qfr-C0-ZOU"/>
+                                            <constraint firstItem="2zo-pk-Xou" firstAttribute="width" secondItem="RG5-dH-vKr" secondAttribute="width" multiplier="0.15" id="r2u-m9-a1s"/>
+                                            <constraint firstItem="omW-hF-09N" firstAttribute="top" secondItem="2zo-pk-Xou" secondAttribute="top" id="r6b-K8-aKz"/>
+                                            <constraint firstItem="GS7-Yo-UUC" firstAttribute="trailing" secondItem="2Gd-GB-lYu" secondAttribute="trailing" id="rbl-4t-C0A"/>
+                                            <constraint firstItem="H1y-mV-r1U" firstAttribute="centerX" secondItem="1My-ik-8fO" secondAttribute="centerX" id="rp2-k8-eUi"/>
+                                            <constraint firstItem="S5r-Wf-49t" firstAttribute="width" secondItem="RG5-dH-vKr" secondAttribute="width" multiplier="0.15" id="sQg-RE-S8V"/>
+                                            <constraint firstItem="CIQ-Zv-gi2" firstAttribute="trailing" secondItem="iR0-hp-LAy" secondAttribute="trailing" id="uZG-dF-Xqt"/>
+                                            <constraint firstItem="b1w-A7-WdW" firstAttribute="leading" secondItem="GS7-Yo-UUC" secondAttribute="leading" id="wxU-Ch-aXb"/>
+                                            <constraint firstItem="H1y-mV-r1U" firstAttribute="top" secondItem="1My-ik-8fO" secondAttribute="bottom" constant="10" id="xd8-jZ-CYd"/>
+                                            <constraint firstItem="2Gd-GB-lYu" firstAttribute="leading" secondItem="RG5-dH-vKr" secondAttribute="leading" constant="20" id="ykh-aB-N5A"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="RG5-dH-vKr" secondAttribute="bottom" id="Dns-s8-fTi"/>
@@ -1136,7 +1192,7 @@ and we NEVER collect data from you!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0T-oI-6RI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3359" y="1469"/>
+            <point key="canvasLocation" x="3357.971014492754" y="1468.5267857142856"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="5Oy-n4-QQs">
@@ -1343,17 +1399,17 @@ and we NEVER collect data from you!</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="psk-7E-s5z">
-                                                    <rect key="frame" x="53" y="359.33333333333331" width="308" height="95.333333333333314"/>
+                                                    <rect key="frame" x="62" y="359.33333333333331" width="290" height="104.66666666666669"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp5-3J-A3e">
-                                                            <rect key="frame" x="0.0" y="9.3333333333333712" width="76.333333333333329" height="76.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="17" width="70.666666666666671" height="70.666666666666671"/>
                                                             <state key="normal" image="Share"/>
                                                             <connections>
                                                                 <action selector="shareVideoPressed:" destination="HeO-V6-XaD" eventType="touchUpInside" id="JLD-AU-M0C"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qth-6B-fIC">
-                                                            <rect key="frame" x="106.33333333333334" y="0.0" width="95.333333333333343" height="95.333333333333329"/>
+                                                            <rect key="frame" x="100.66666666666666" y="8" width="88.666666666666657" height="88.333333333333329"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="qth-6B-fIC" secondAttribute="height" multiplier="1:1" id="Mjc-n4-Ybe"/>
                                                             </constraints>
@@ -1363,7 +1419,7 @@ and we NEVER collect data from you!</string>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvT-ci-Rb8">
-                                                            <rect key="frame" x="231.66666666666671" y="9.3333333333333712" width="76.333333333333343" height="76.333333333333329"/>
+                                                            <rect key="frame" x="219.33333333333331" y="17" width="70.666666666666686" height="70.666666666666671"/>
                                                             <state key="normal" image="Delete"/>
                                                             <connections>
                                                                 <action selector="deleteVideoPressed:" destination="HeO-V6-XaD" eventType="touchUpInside" id="Ne6-Hh-6fd"/>
@@ -1386,10 +1442,11 @@ and we NEVER collect data from you!</string>
                                                 <constraint firstItem="lN4-xw-78h" firstAttribute="centerY" secondItem="HT2-Sn-I4O" secondAttribute="centerY" id="3Gu-hK-mgJ"/>
                                                 <constraint firstItem="HT2-Sn-I4O" firstAttribute="leading" secondItem="Ubu-37-hY4" secondAttribute="leadingMargin" constant="10" id="6jd-9B-IVy"/>
                                                 <constraint firstItem="XXB-eo-Fp7" firstAttribute="centerX" secondItem="Ubu-37-hY4" secondAttribute="centerX" id="9wz-e4-qyy"/>
-                                                <constraint firstAttribute="bottom" secondItem="psk-7E-s5z" secondAttribute="bottom" constant="20" symbolic="YES" id="GdL-ED-jdo"/>
+                                                <constraint firstItem="psk-7E-s5z" firstAttribute="width" secondItem="Ubu-37-hY4" secondAttribute="width" multiplier="0.7" id="AHj-oR-E8Y"/>
                                                 <constraint firstItem="XXB-eo-Fp7" firstAttribute="top" secondItem="Ubu-37-hY4" secondAttribute="top" constant="20" symbolic="YES" id="KmM-Uf-CWL"/>
                                                 <constraint firstItem="lN4-xw-78h" firstAttribute="leading" secondItem="HT2-Sn-I4O" secondAttribute="trailing" constant="8" symbolic="YES" id="MFi-oo-DLg"/>
                                                 <constraint firstItem="0Wd-sb-yen" firstAttribute="leading" secondItem="lN4-xw-78h" secondAttribute="trailing" constant="8" symbolic="YES" id="Yqy-IQ-eO8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="psk-7E-s5z" secondAttribute="bottom" id="bn2-1l-IDA"/>
                                                 <constraint firstItem="lN4-xw-78h" firstAttribute="width" secondItem="Ubu-37-hY4" secondAttribute="width" multiplier="0.55" id="bwF-1F-ecP"/>
                                                 <constraint firstItem="psk-7E-s5z" firstAttribute="centerX" secondItem="Ubu-37-hY4" secondAttribute="centerX" id="ejy-j8-qdg"/>
                                                 <constraint firstItem="XXB-eo-Fp7" firstAttribute="width" secondItem="Ubu-37-hY4" secondAttribute="width" multiplier="0.9" id="kx0-cM-8bC"/>
@@ -1400,10 +1457,10 @@ and we NEVER collect data from you!</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="leftTime" destination="0Wd-sb-yen" id="nIN-AS-jiF"/>
+                                            <outlet property="leftTime" destination="HT2-Sn-I4O" id="8Nc-PF-qUg"/>
                                             <outlet property="playBtn" destination="qth-6B-fIC" id="qeA-Ci-dSg"/>
                                             <outlet property="progressView" destination="lN4-xw-78h" id="ZAx-63-sfT"/>
-                                            <outlet property="rightTime" destination="HT2-Sn-I4O" id="LTe-r8-BeU"/>
+                                            <outlet property="rightTime" destination="0Wd-sb-yen" id="F21-bH-iyz"/>
                                             <outlet property="silentVideoView" destination="v1s-C0-IvY" id="4rc-oR-gEj"/>
                                             <outlet property="videoView" destination="GW7-hB-JR2" id="Ot4-Al-YGf"/>
                                         </connections>
@@ -1466,13 +1523,13 @@ and we NEVER collect data from you!</string>
         <image name="CheckmarkYellow" width="120" height="120"/>
         <image name="Delete" width="540" height="540"/>
         <image name="EndCall" width="216" height="216"/>
-        <image name="Information" width="530" height="530"/>
+        <image name="HappyBirthday" width="460" height="460"/>
+        <image name="Introduction" width="380" height="380"/>
         <image name="Lock" width="82" height="82"/>
         <image name="Play" width="540" height="540"/>
         <image name="PlayGrey" width="500" height="500"/>
         <image name="PlayWhite" width="520" height="520"/>
         <image name="PrincessEyesOpen" width="1440" height="1440"/>
-        <image name="PrincessPhoto" width="500" height="500"/>
         <image name="Recording" width="530" height="530"/>
         <image name="Safe" width="500" height="604"/>
         <image name="Share" width="540" height="540"/>

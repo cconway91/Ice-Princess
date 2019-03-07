@@ -1,8 +1,13 @@
 import UIKit
+import StoreKit
 
 class MainViewContoller: UIViewController {
     
     //MARK: - Constants
+    private enum Settings: String {
+        case SendReview
+    }
+    
     private struct Storyboard {
         static let ShowParentsOnlySegueIdentifier = "ShowParentsOnly"
     }
@@ -64,20 +69,39 @@ class MainViewContoller: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    private func requestReview() {
+        let defaults = UserDefaults.standard
+        let sendReview = defaults.bool(forKey: Settings.SendReview.rawValue)
+        if sendReview {
+            defaults.set(false, forKey: Settings.SendReview.rawValue)
+            if #available(iOS 10.3, *) {
+                SKStoreReviewController.requestReview()
+            } else {
+                let alert = UIAlertController(title: "Enjoying Video Call Ice Princess", message: "Would you like to give us a review?", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Later", style: .cancel, handler: nil))
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                    UIApplication.shared.open(URL(string: "https://itunes.apple.com/us/app/video-call-ice-princess/id1453262130")! as URL, options: [:], completionHandler: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
     private func updateUI() {
-        let scale = CGAffineTransform(scaleX: 1.1, y: 1.1)
+//        let scale = CGAffineTransform(scaleX: 1.1, y: 1.1)
         UIView.animate(withDuration: 0.2, animations: {
             self.callBtn.alpha = 1.0
             self.parentsBtn.alpha = 1.0
             self.titleLbl.alpha = 1.0
-            self.callBtn.transform = scale
-            self.parentsBtn.transform = scale
-            self.titleLbl.transform = scale
+//            self.callBtn.transform = scale
+//            self.parentsBtn.transform = scale
+//            self.titleLbl.transform = scale
         })
     }
     
     //MARK: - Segues
     @IBAction func exitModalScene(_ segue: UIStoryboardSegue) {
+        requestReview()
     }
     
     //Mark: - Actions

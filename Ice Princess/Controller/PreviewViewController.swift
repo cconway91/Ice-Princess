@@ -191,11 +191,11 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     }
     
     private func updateUI() {
-        setupVideo()
         checkVideoName()
         checkCallVideo()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
         NotificationCenter.default.addObserver(self, selector: #selector(PreviewViewController.playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        self.setupVideo()
         self.resetVideo()
         }
     }

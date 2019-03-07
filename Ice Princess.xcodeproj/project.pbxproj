@@ -17,7 +17,6 @@
 		3718D99B2217CE37001398A1 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D99A2217CE37001398A1 /* LaunchScreenViewController.swift */; };
 		3718D99D2217D032001398A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D99C2217D032001398A1 /* MainViewController.swift */; };
 		3718D99F2217D1EF001398A1 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D99E2217D1EF001398A1 /* CallViewController.swift */; };
-		3718D9A42217D4F3001398A1 /* Introduction.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A32217D4F3001398A1 /* Introduction.mp4 */; };
 		3718D9A62217D513001398A1 /* ClickOff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A52217D513001398A1 /* ClickOff.mp3 */; };
 		3718D9A82217D51F001398A1 /* ClickOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A72217D51F001398A1 /* ClickOn.mp3 */; };
 		3718D9AA2217D52B001398A1 /* EndCall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3718D9A92217D52B001398A1 /* EndCall.mp3 */; };
@@ -28,6 +27,7 @@
 		373703FB221FB44700FDA14D /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373703FA221FB44700FDA14D /* PreviewViewController.swift */; };
 		373703FD22224C2300FDA14D /* HappyBirthday.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 373703FC22224C2300FDA14D /* HappyBirthday.mp4 */; };
 		373703FF222282F000FDA14D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373703FE222282F000FDA14D /* Protocols.swift */; };
+		3756C20B223188DB00FDD342 /* Introduction.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3756C20A223188DA00FDD342 /* Introduction.mp4 */; };
 		375CB6CB222628CD004699C2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375CB6CA222628CD004699C2 /* StoreKit.framework */; };
 		375CB6CD22279211004699C2 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CB6CC22279211004699C2 /* CustomSegmentedControl.swift */; };
 		375CB6CF2227924C004699C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CB6CE2227924C004699C2 /* Extensions.swift */; };
@@ -56,7 +56,6 @@
 		3718D99A2217CE37001398A1 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		3718D99C2217D032001398A1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3718D99E2217D1EF001398A1 /* CallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
-		3718D9A32217D4F3001398A1 /* Introduction.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Introduction.mp4; sourceTree = "<group>"; };
 		3718D9A52217D513001398A1 /* ClickOff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ClickOff.mp3; sourceTree = "<group>"; };
 		3718D9A72217D51F001398A1 /* ClickOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ClickOn.mp3; sourceTree = "<group>"; };
 		3718D9A92217D52B001398A1 /* EndCall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EndCall.mp3; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		373703FA221FB44700FDA14D /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		373703FC22224C2300FDA14D /* HappyBirthday.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = HappyBirthday.mp4; sourceTree = "<group>"; };
 		373703FE222282F000FDA14D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		3756C20A223188DA00FDD342 /* Introduction.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Introduction.mp4; sourceTree = "<group>"; };
 		375CB6CA222628CD004699C2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		375CB6CC22279211004699C2 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		375CB6CE2227924C004699C2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		3718D9A12217D4B7001398A1 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				3718D9A32217D4F3001398A1 /* Introduction.mp4 */,
+				3756C20A223188DA00FDD342 /* Introduction.mp4 */,
 				373703FC22224C2300FDA14D /* HappyBirthday.mp4 */,
 			);
 			name = Videos;
@@ -284,13 +284,13 @@
 				3718D98722178997001398A1 /* Assets.xcassets in Resources */,
 				3718D9A82217D51F001398A1 /* ClickOn.mp3 in Resources */,
 				3718D98522178996001398A1 /* Main.storyboard in Resources */,
+				3756C20B223188DB00FDD342 /* Introduction.mp4 in Resources */,
 				3718D9AA2217D52B001398A1 /* EndCall.mp3 in Resources */,
 				3718D9AE2217D547001398A1 /* StartCall.mp3 in Resources */,
 				3718D9A62217D513001398A1 /* ClickOff.mp3 in Resources */,
 				373703FD22224C2300FDA14D /* HappyBirthday.mp4 in Resources */,
 				3718D9992217CC3E001398A1 /* Billabong.ttf in Resources */,
 				3718D9AC2217D539001398A1 /* OutboundRingTone.mp3 in Resources */,
-				3718D9A42217D4F3001398A1 /* Introduction.mp4 in Resources */,
 				375CB6DB22279C5A004699C2 /* Alerts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

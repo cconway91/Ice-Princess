@@ -49,7 +49,7 @@ class SettingsViewController: UITableViewController {
             delegate?.segueToNext(identifier: Storyboard.ShowWhyOurAppisSafeSegueIdentifier)
         }
         if indexPath.row == 2 {
-            //Add link to review
+            UIApplication.shared.open(URL(string: "https://itunes.apple.com/us/app/video-call-ice-princess/id1453262130")! as URL, options: [:], completionHandler: nil)
         }
         if indexPath.row == 3 {
             UIApplication.shared.open(URL(string: "https://www.facebook.com/VideoCallPrincess/")! as URL, options: [:], completionHandler: nil)

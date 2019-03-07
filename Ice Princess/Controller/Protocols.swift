@@ -1,5 +1,9 @@
 import AVFoundation
 
+protocol PauseVideoDelegate: class {
+    func pauseVideo()
+}
+
 protocol RecordingsTableViewCellDelegate: class {
     func shareVideo(senderCell: RecordingsTableViewCell, videoURL: URL, videoName: String)
     func deleteVideo(senderCell: RecordingsTableViewCell, videoURL: URL)

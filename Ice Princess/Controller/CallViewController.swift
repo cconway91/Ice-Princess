@@ -7,7 +7,7 @@ class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate
     
     //MARK: - Constants
     private enum Settings: String {
-        case CallVideo, IsRecordingOn
+        case CallVideo, IsRecordingOn, SendReview
     }
     
     private enum SoundFile: String {
@@ -129,6 +129,11 @@ class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate
         player.play()
     }
     
+    private func sendReview() {
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: Settings.SendReview.rawValue)
+    }
+    
     private func setupDevice() {
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(
             deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera, .builtInMicrophone],
@@ -213,6 +218,7 @@ class CallViewController: UIViewController, AVCaptureFileOutputRecordingDelegate
                 self.recordVideo()
                 self.resetVideo()
                 self.addTime()
+                self.sendReview()
             }
         }
     }

@@ -32,6 +32,16 @@ extension String {
 }
 
 @objc class Helper: NSObject {
+    
+    static var mainVideoSize : CGSize!
+    {
+        didSet{
+            self.originalVideoSize = self.mainVideoSize
+        }
+    }
+    @objc static var originalVideoSize : Any!
+    static var isVideoPortrait = true
+    
     class func orientationFromTransform(transform: CGAffineTransform) -> (orientation: UIImage.Orientation, isPortrait: Bool) {
         var assetOrientation = UIImage.Orientation.up
         var isPortrait = false
@@ -48,33 +58,58 @@ extension String {
         }
         return (assetOrientation, isPortrait)
     }
-
-    @objc class func videoCompositionInstructionForTrack(track: AVCompositionTrack, asset: AVAsset, isPortraitMode: Bool, isSmaller: Bool = false) -> AVMutableVideoCompositionLayerInstruction {
+    
+    @objc class func videoCompositionInstructionForTrack(track: AVCompositionTrack, asset: AVAsset, isPortraitMode: Bool, isSmaller: Bool = false) -> NSMutableDictionary {
+        
+        
+        
+        
         let instruction = AVMutableVideoCompositionLayerInstruction(assetTrack: track)
         let assetTrack = asset.tracks(withMediaType: AVMediaType.video)[0]
-
+        
+        
+        
         let transform = assetTrack.preferredTransform
         let assetInfo = orientationFromTransform(transform: transform)
-
+        var requireWidth:CGFloat = 0.0
+        
+        if isSmaller == false
+        {
+            self.mainVideoSize = assetTrack.naturalSize
+            self.isVideoPortrait = assetInfo.isPortrait
+        }
+        
         if isPortraitMode {
             //Scaled the video to hight not width of screen
-            var scaleToFitRatio = UIScreen.main.bounds.height / assetTrack.naturalSize.height
+            var scaleToFitRatio:CGFloat =  1.0
+            
             if assetInfo.isPortrait {
-                scaleToFitRatio = UIScreen.main.bounds.width / UIScreen.main.bounds.height
+                
+                if isSmaller == true
+                {
+                    scaleToFitRatio = (self.isVideoPortrait == true ? self.mainVideoSize.width : self.mainVideoSize.height) / assetTrack.naturalSize.width
+                }
                 scaleToFitRatio = isPortraitMode && isSmaller ? scaleToFitRatio / 4 : scaleToFitRatio
                 let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
                 if isPortraitMode && isSmaller {
                     //this puts the smaller video in the corner.
                     let assetSize = CGSize(width: scaleToFitRatio * assetTrack.naturalSize.height, height: scaleToFitRatio * assetTrack.naturalSize.width)
-                    let translation = CGAffineTransform(translationX: UIScreen.main.bounds.width - assetSize.width - 30,
-                                                        y: UIScreen.main.bounds.height - assetSize.height - 30)
+                    let translation = CGAffineTransform(translationX: (self.isVideoPortrait == true ? self.mainVideoSize.height : self.mainVideoSize.width) - assetSize.width - 30,
+                                                        y: (self.isVideoPortrait == true ? self.mainVideoSize.width : self.mainVideoSize.height) - assetSize.height - 30)
                     instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(translation),
                                              at: CMTime.zero)
+                    requireWidth = (assetSize.width) + 30
                 } else {
+                    
                     instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor),
                                              at: CMTime.zero)
                 }
             } else {
+                if isSmaller == true
+                {
+                    scaleToFitRatio = (self.isVideoPortrait == true ? self.mainVideoSize.width : self.mainVideoSize.height) / assetTrack.naturalSize.width
+                }
+                
                 scaleToFitRatio = isPortraitMode && isSmaller ? scaleToFitRatio / 4 : scaleToFitRatio
                 let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
                 var concat = assetTrack.preferredTransform.concatenating(scaleFactor)
@@ -88,17 +123,20 @@ extension String {
                 instruction.setTransform(concat, at: CMTime.zero)
             }
         } else {
-            var scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.height
+            
+            var scaleToFitRatio:CGFloat = 1.0;//UIScreen.main.bounds.width / assetTrack.naturalSize.height
             if assetInfo.isPortrait {
-                scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.width
+                scaleToFitRatio = (self.isVideoPortrait == true ? self.mainVideoSize.height : self.mainVideoSize.width) / assetTrack.naturalSize.width
                 let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
-                let translation = CGAffineTransform(translationX: isSmaller ? (UIScreen.main.bounds.width/2) : 0,
+                let translation = CGAffineTransform(translationX: isSmaller ? ((self.isVideoPortrait == true ? self.mainVideoSize.height : self.mainVideoSize.width)/2) : 0,
                                                     y: 0)
                 instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(translation),
                                          at: CMTime.zero)
+                
             } else {
+                scaleToFitRatio = (self.isVideoPortrait == true ? self.mainVideoSize.height : self.mainVideoSize.width) / assetTrack.naturalSize.height
                 let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
-                let translation = CGAffineTransform(translationX: isSmaller ? (UIScreen.main.bounds.width/2) : 0,
+                let translation = CGAffineTransform(translationX: isSmaller ? ((self.isVideoPortrait == true ? self.mainVideoSize.height : self.mainVideoSize.width)/2) : 0,
                                                     y: 0)
                 var concat = assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(translation)
                 if assetInfo.orientation == .down {
@@ -110,7 +148,15 @@ extension String {
                 }
                 instruction.setTransform(concat, at: CMTime.zero)
             }
+            if isSmaller == true
+            {
+                requireWidth = ((self.isVideoPortrait == true ? self.mainVideoSize.height : self.mainVideoSize.width)/2)
+            }
         }
-        return instruction
+        
+        let dict = NSMutableDictionary()
+        dict.setValue(instruction, forKey: "Instruction")
+        dict.setValue(requireWidth, forKey: "RequireWidth")
+        return dict
     }
 }

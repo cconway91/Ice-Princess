@@ -11,6 +11,7 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     //MARK: - Properties
+    weak var delegate: PauseVideoDelegate?
     var cells: [Int: RecordingsTableViewCell] = [:]
     var shareVideoName: String!
     var shareVideoURL: URL!
@@ -27,6 +28,11 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         deleteOverlapVideo()
         updateUI()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
     }
     
     //MARK: - Helpers

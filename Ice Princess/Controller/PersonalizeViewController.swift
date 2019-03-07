@@ -4,6 +4,10 @@ import StoreKit
 class PersonalizeViewController: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     //MARK: - Constants
+    private enum Settings: String {
+        case CallVideo
+    }
+    
     private struct Storyboard {
         static let ShowEpisodesSegueIdentifier = "ShowEpisodes"
     }
@@ -13,7 +17,11 @@ class PersonalizeViewController: UIViewController, SKProductsRequestDelegate, SK
     var p = SKProduct()
     
     //MARK: - Outlets
+    @IBOutlet weak var backgroundPrincessPhoto: UIImageView!
     @IBOutlet weak var episodeView: RoundView!
+    @IBOutlet weak var previewTitleLbl: UILabel!
+    @IBOutlet weak var previewBottomLbl: UILabel!
+    @IBOutlet weak var princessPhoto: CircleImgWithBoarder!
     
     //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
@@ -35,10 +43,30 @@ class PersonalizeViewController: UIViewController, SKProductsRequestDelegate, SK
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateUI()
+    }
+    
     //MARK: - Helpers
     func unlockEpisode() {
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "HappyBirthday")
+    }
+    
+    private func updateUI() {
+        let defaults = UserDefaults.standard
+        if defaults.string(forKey: Settings.CallVideo.rawValue) == "Introduction" {
+            previewTitleLbl.text = "Introduction"
+            previewBottomLbl.text = "Hello, it's nice to meet you!"
+            princessPhoto.image = UIImage(named: "Introduction")
+            backgroundPrincessPhoto.image = UIImage(named: "Introduction")
+        } else {
+            previewTitleLbl.text = "Happy Birthday!"
+            previewBottomLbl.text = "Are you having a good day?"
+            princessPhoto.image = UIImage(named: "HappyBirthday")
+            backgroundPrincessPhoto.image = UIImage(named: "HappyBirthday")
+        }
     }
     
     func buyEpisode() {

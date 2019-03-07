@@ -25,21 +25,30 @@
     MainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, firstAsset.duration);
     
     
-    //set where the first screen is located
-    AVMutableVideoCompositionLayerInstruction *FirstlayerInstruction = [Helper videoCompositionInstructionForTrackWithTrack:firstTrack asset:firstAsset isPortraitMode:isPortraitMode isSmaller:YES];
-    
     //set where the second screen is located
-    AVMutableVideoCompositionLayerInstruction *SecondlayerInstruction = [Helper videoCompositionInstructionForTrackWithTrack:secondTrack asset:secondAsset isPortraitMode:isPortraitMode isSmaller:NO];
+    NSMutableDictionary*dict2 = [Helper videoCompositionInstructionForTrackWithTrack:secondTrack asset:secondAsset isPortraitMode:isPortraitMode isSmaller:NO];
+    AVMutableVideoCompositionLayerInstruction *SecondlayerInstruction = [dict2 valueForKey:@"Instruction"];
+    
+    //set where the first screen is located
+    NSMutableDictionary*dict1 = [Helper videoCompositionInstructionForTrackWithTrack:firstTrack asset:firstAsset isPortraitMode:isPortraitMode isSmaller:YES];
+    AVMutableVideoCompositionLayerInstruction *FirstlayerInstruction = [dict1 valueForKey:@"Instruction"];
+    
     
     MainInstruction.layerInstructions = [NSArray arrayWithObjects:FirstlayerInstruction,SecondlayerInstruction,nil];;
     
     
     AVMutableVideoComposition *MainCompositionInst = [AVMutableVideoComposition videoComposition];
     MainCompositionInst.instructions = [NSArray arrayWithObject:MainInstruction];
-    MainCompositionInst.frameDuration = CMTimeMake(1, 30);
+    MainCompositionInst.frameDuration = CMTimeMake(1, 60);
+    
     //PortraitMode
-    CGSize sizeOfVideo = [UIScreen mainScreen].bounds.size;
-    CGFloat sizeOfScreenWidth = [UIScreen mainScreen].bounds.size.width;
+    
+    CGSize sizeOfVideo = [[Helper originalVideoSize] CGSizeValue];
+    if (sizeOfVideo.height < sizeOfVideo.width) {
+        sizeOfVideo = CGSizeMake(sizeOfVideo.height, sizeOfVideo.width);
+    }
+    //CGSizeMake([secondAsset naturalSize].height, [secondAsset naturalSize].width);//[UIScreen mainScreen].bounds.size;
+    CGFloat sizeOfScreenWidth = sizeOfVideo.width;//[UIScreen mainScreen].bounds.size.width;
     CGFloat watermarkSize = 0;
     CGFloat watermarkXPosition = 0;
     CGFloat watermarkYPosition = 0;
@@ -49,44 +58,60 @@
     CGFloat textXPosition = 0;
     CGFloat textYPosition = 0;
     if (isPortraitMode) {
-        MainCompositionInst.renderSize = [UIScreen mainScreen].bounds.size;
-        sizeOfVideo = [UIScreen mainScreen].bounds.size;
-        watermarkSize = 100;
+        MainCompositionInst.renderSize = sizeOfVideo;//[UIScreen mainScreen].bounds.size;
+        //        sizeOfVideo = [UIScreen mainScreen].bounds.size;
+        watermarkSize = 200;//100;
         watermarkXPosition = 15;
         watermarkYPosition = 35;
-        textWidth = 150;
-        textHeight = 95;
-        fontSize = 36;
-        textXPosition = 125;
+        textWidth = 300;//150;
+        textHeight = 185;//95;
+        fontSize = 70;
+        textXPosition = 225;//125;
         textYPosition = 35;
     } else {
         MainCompositionInst.renderSize = CGSizeMake(sizeOfScreenWidth, sizeOfScreenWidth);
         sizeOfVideo = CGSizeMake(sizeOfScreenWidth, sizeOfScreenWidth);
-        watermarkSize = 75;
+        watermarkSize = 150;
         watermarkXPosition = 15;
         watermarkYPosition = 15;
-        textWidth = 115;
-        textHeight = 70;
-        fontSize = 27;
-        textXPosition = 100;
+        textWidth = 230;
+        textHeight = 150;
+        fontSize = 40;
+        textXPosition = 170;
         textYPosition = 15;
     }
     
-    UIImage *myImage=[UIImage imageNamed:@"Watermark.png"];
+    CGFloat requireSpace = watermarkXPosition + watermarkSize + textXPosition + textWidth;
+    CGFloat requireVidWidth = [[dict1 valueForKey:@"RequireWidth"] floatValue];
+    
+    CGFloat availableSpace = sizeOfVideo.width - ((CGFloat)requireVidWidth);
+    if (availableSpace < requireSpace) {
+        CGFloat scale = availableSpace/requireSpace;
+        //        CGFloat oldSize = watermarkSize;
+        watermarkSize = watermarkSize*(scale*1.35);
+        textWidth = textWidth*(scale*1.65);
+        textHeight = textHeight * (scale*1.35);
+        textXPosition = 25 + watermarkSize;
+        //        textYPosition = (isPortraitMode == YES ? 35 : 15) - ((oldSize - watermarkSize)/2);
+        fontSize = (watermarkSize*50)/170;
+    }
+    
+    UIImage *myImage=[UIImage imageNamed:@"Watermark"];
     CALayer *layerCa = [CALayer layer];
-    layerCa.contents = (id)myImage.CGImage;
+    
+    layerCa.contents = (__bridge id _Nullable)[myImage CGImage];//(__bridge id _Nullable)([self resizeImage:myImage newSize:CGSizeMake(watermarkSize, watermarkSize)]);
     layerCa.frame = CGRectMake(watermarkXPosition, watermarkYPosition, watermarkSize, watermarkSize);
     layerCa.opacity = 1.0;
     
     
     CATextLayer *layerText = [CATextLayer layer];
-    layerText.string = @"Video Call Ice Princess";
+    layerText.string = @"Video Call \nIce Princess";
     layerText.font = (__bridge CFTypeRef)@"Billabong";
     layerText.fontSize = fontSize;
     layerText.alignmentMode = kCAAlignmentLeft;
     layerText.wrapped = YES;
     layerText.frame = CGRectMake(textXPosition, textYPosition, textWidth, textHeight);
-        
+    
     
     CALayer *parentLayer=[CALayer layer];
     CALayer *videoLayer=[CALayer layer];
@@ -115,6 +140,69 @@
     exporter.outputFileType = AVFileTypeQuickTimeMovie;
     
     return exporter;
+}
+
++ (CGImageRef)resizeImage:(UIImage*)image newSize:(CGSize)newSize {
+    CGRect newRect = CGRectIntegral(CGRectMake(0, 0, newSize.width, newSize.height));
+    CGImageRef imageRef = image.CGImage;
+    
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+    CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, newSize.height);
+    
+    CGContextConcatCTM(context, flipVertical);
+    CGContextDrawImage(context, newRect, imageRef);
+    
+    CGImageRef newImageRef = CGBitmapContextCreateImage(context);
+    //    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
+    
+    //    CGImageRelease(newImageRef);
+    UIGraphicsEndImageContext();
+    
+    return newImageRef;
+}
+
++(BOOL)isVideoPortrait:(AVURLAsset*)asset
+{
+    /*  var assetOrientation = UIImage.Orientation.up
+     var isPortrait = false
+     if transform.a == 0 && transform.b == 1.0 && transform.c == -1.0 && transform.d == 0 {
+     assetOrientation = .right
+     isPortrait = true
+     } else if transform.a == 0 && transform.b == -1.0 && transform.c == 1.0 && transform.d == 0 {
+     assetOrientation = .left
+     isPortrait = true
+     } else if transform.a == 1.0 && transform.b == 0 && transform.c == 0 && transform.d == 1.0 {
+     assetOrientation = .up
+     } else if transform.a == -1.0 && transform.b == 0 && transform.c == 0 && transform.d == -1.0 {
+     assetOrientation = .down
+     }
+     return (assetOrientation, isPortrait)*/
+    
+    AVAssetTrack *videoAsset = [[asset tracksWithMediaType:AVMediaTypeVideo] firstObject];
+    
+    UIImageOrientation videoAssetOrientation_  = UIImageOrientationUp;
+    BOOL  isVideoAssetPortrait_  = NO;
+    CGAffineTransform videoTransform = videoAsset.preferredTransform;
+    
+    if(videoTransform.a == 0 && videoTransform.b == 1.0 && videoTransform.c == -1.0 && videoTransform.d == 0)  {
+        videoAssetOrientation_= UIImageOrientationRight; isVideoAssetPortrait_ = YES;
+    }
+    
+    if(videoTransform.a == 0 && videoTransform.b == -1.0 && videoTransform.c == 1.0 && videoTransform.d == 0)  {
+        videoAssetOrientation_ =  UIImageOrientationLeft; isVideoAssetPortrait_ = YES;
+    }
+    
+    if(videoTransform.a == 1.0 && videoTransform.b == 0 && videoTransform.c == 0 && videoTransform.d == 1.0)   {
+        videoAssetOrientation_ =  UIImageOrientationUp;
+    }
+    
+    if(videoTransform.a == -1.0 && videoTransform.b == 0 && videoTransform.c == 0 && videoTransform.d == -1.0) {
+        videoAssetOrientation_ = UIImageOrientationDown;
+    }
+    return isVideoAssetPortrait_;
 }
 
 @end

@@ -1,7 +1,7 @@
 import UIKit
 import AVFoundation
 
-class RecordingsTableViewCell: UITableViewCell {
+class RecordingsTableViewCell: UITableViewCell, PauseVideoDelegate {
     
     //MARK: - Constants
     
@@ -98,6 +98,10 @@ class RecordingsTableViewCell: UITableViewCell {
     }
     
     //MARK: - Actions
+    @IBAction func deleteVideoPressed(_ sender: UIButton) {
+        delegate?.deleteVideo(senderCell: self, videoURL: url)
+    }
+    
     @IBAction func playBtnPressed(_ sender: Any) {
         if isPlaying {
             isPlaying = false
@@ -112,7 +116,8 @@ class RecordingsTableViewCell: UITableViewCell {
         delegate?.shareVideo(senderCell: self, videoURL: url, videoName: videoName)
     }
     
-    @IBAction func deleteVideoPressed(_ sender: UIButton) {
-        delegate?.deleteVideo(senderCell: self, videoURL: url)
+    //MARK: - PauseVideoDelegate
+    func pauseVideo() {
+        stopVideos()
     }
 }

@@ -193,10 +193,11 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 print("Ooops! Something went wrong: \(error)")
             }
             if let indexPath = self.tableView.indexPath(for: senderCell) {
-                self.tableView.beginUpdates()
+//                self.tableView.beginUpdates()
                 self.urls.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                self.tableView.endUpdates()
+//                self.tableView.endUpdates()
+                self.tableView.reloadData()
                 self.checkNoRecordingsView()
             }
         }))

@@ -18,14 +18,19 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     
     //MARK: - Properties
     var delegate: EpisodesViewControllerDelegate?
+    var fadeSeconds = 0
     var list = [SKProduct]()
+    var nextPreviousBtnPressed = false
     var p = SKProduct()
     var player: AVPlayer!
     var playerLayer: AVPlayerLayer!
+    var time = 0
+    var timer = Timer()
     var videoName: String!
 
     //MARK: - Outlets
     @IBOutlet weak var bottomLbl: UILabel!
+    @IBOutlet weak var fadeOutView: UIView!
     @IBOutlet weak var previewBox: RoundView!
     @IBOutlet weak var replayBtn: UIButton!
     @IBOutlet weak var replayLbl: UILabel!
@@ -107,9 +112,11 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
         if videoName == "Introduction" {
             titleLbl.text = "Introduction"
             bottomLbl.text = "Hello, it's nice to meet you!"
+            fadeSeconds = 4
         } else if videoName == "HappyBirthday" {
             titleLbl.text = "Happy Birthday!"
             bottomLbl.text = "Are you having a good day?"
+            fadeSeconds = 3
         } else {
             print("Video Not Found")
         }
@@ -175,6 +182,9 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     }
     
     private func resetVideo() {
+        fadeOutView.backgroundColor = UIColor.clear
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer, forMode: .common)
         player.seek(to: ResetTime.SeekTime)
         player.play()
     }
@@ -191,11 +201,24 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
     }
     
+    @objc func updateTime() {
+        time = time + 1
+        if time == fadeSeconds {
+            UIView.animate(withDuration: 1.0, animations: {
+                self.fadeOutView.backgroundColor = UIColor.black
+            })
+        }
+        if time == fadeSeconds + 1 {
+            playerDidFinishPlaying()
+            timer.invalidate()
+            time = 0
+        }
+    }
+    
     private func updateUI() {
         checkVideoName()
         checkCallVideo()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-        NotificationCenter.default.addObserver(self, selector: #selector(PreviewViewController.playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         self.setupVideo()
         self.resetVideo()
         }
@@ -204,10 +227,13 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     //MARK: - Actions
     @IBAction func cancelBtnPressed(_ sender: Any) {
         player.pause()
+        timer.invalidate()
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nextBtnPressed(_ sender: Any) {
+        timer.invalidate()
+        time = 0
         replayBtn.isHidden = true
         replayLbl.isHidden = true
         player.pause()
@@ -219,6 +245,8 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     }
     
     @IBAction func previousBtnPressed(_ sender: Any) {
+        timer.invalidate()
+        time = 0
         replayBtn.isHidden = true
         replayLbl.isHidden = true
         player.pause()

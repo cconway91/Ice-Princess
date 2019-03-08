@@ -786,6 +786,9 @@
                                             <constraint firstAttribute="width" secondItem="CWG-iB-7J1" secondAttribute="height" multiplier="290:386" id="CAz-zc-5dp"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr0-aw-YjK">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="385.66666666666669"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkv-Xq-T3I">
                                         <rect key="frame" x="256.66666666666669" y="9.9999999999999982" width="23.333333333333314" height="23.333333333333329"/>
                                         <constraints>
@@ -888,6 +891,7 @@
                                     <constraint firstItem="hoh-Pe-o3J" firstAttribute="width" secondItem="KeE-Px-9Yd" secondAttribute="width" multiplier="0.2" id="6UT-uu-ZpG"/>
                                     <constraint firstAttribute="width" secondItem="KeE-Px-9Yd" secondAttribute="height" multiplier="9:16" id="9aW-p6-PhH"/>
                                     <constraint firstItem="t2T-91-DBX" firstAttribute="top" secondItem="CWG-iB-7J1" secondAttribute="bottom" constant="10" id="BUI-4b-ZyR"/>
+                                    <constraint firstItem="Jr0-aw-YjK" firstAttribute="bottom" secondItem="CWG-iB-7J1" secondAttribute="bottom" id="BzS-5k-pb5"/>
                                     <constraint firstItem="QWg-1e-IRK" firstAttribute="leading" secondItem="eda-qs-Ysy" secondAttribute="trailing" constant="8" symbolic="YES" id="C6g-Gt-lO6"/>
                                     <constraint firstAttribute="trailing" secondItem="CWG-iB-7J1" secondAttribute="trailing" id="C8w-lr-6TD"/>
                                     <constraint firstItem="zkv-Xq-T3I" firstAttribute="width" secondItem="KeE-Px-9Yd" secondAttribute="width" multiplier="0.08" id="DnY-vB-ewf"/>
@@ -902,6 +906,7 @@
                                     <constraint firstItem="eda-qs-Ysy" firstAttribute="leading" secondItem="zRs-5c-mxE" secondAttribute="leading" id="YAW-wD-gsi"/>
                                     <constraint firstItem="hoh-Pe-o3J" firstAttribute="centerX" secondItem="CWG-iB-7J1" secondAttribute="centerX" id="YWi-Qd-cFj"/>
                                     <constraint firstAttribute="bottom" secondItem="QWg-1e-IRK" secondAttribute="bottom" constant="20" id="Ywh-as-fk4"/>
+                                    <constraint firstItem="Jr0-aw-YjK" firstAttribute="trailing" secondItem="CWG-iB-7J1" secondAttribute="trailing" id="ZZg-6p-IAy"/>
                                     <constraint firstItem="VP7-kd-DqB" firstAttribute="width" secondItem="KeE-Px-9Yd" secondAttribute="width" multiplier="0.14" id="ZfX-oI-kWT"/>
                                     <constraint firstAttribute="trailing" secondItem="zkv-Xq-T3I" secondAttribute="trailing" constant="10" id="aoA-DX-SX7"/>
                                     <constraint firstItem="F9c-87-Eaf" firstAttribute="leading" secondItem="eda-qs-Ysy" secondAttribute="leading" id="e2t-0Y-5yX"/>
@@ -909,6 +914,7 @@
                                     <constraint firstItem="xY5-eA-YBn" firstAttribute="leading" secondItem="KeE-Px-9Yd" secondAttribute="leading" constant="10" id="hUm-h9-aBe"/>
                                     <constraint firstItem="zRs-5c-mxE" firstAttribute="width" secondItem="KeE-Px-9Yd" secondAttribute="width" multiplier="0.9" id="jQ0-6N-53I"/>
                                     <constraint firstItem="hoh-Pe-o3J" firstAttribute="centerY" secondItem="CWG-iB-7J1" secondAttribute="centerY" id="kBg-CO-LeR"/>
+                                    <constraint firstItem="Jr0-aw-YjK" firstAttribute="leading" secondItem="CWG-iB-7J1" secondAttribute="leading" id="lGm-1e-4fn"/>
                                     <constraint firstItem="zRs-5c-mxE" firstAttribute="top" secondItem="t2T-91-DBX" secondAttribute="bottom" constant="9.9999999999998863" id="lHd-aL-QyS"/>
                                     <constraint firstItem="xY5-eA-YBn" firstAttribute="width" secondItem="KeE-Px-9Yd" secondAttribute="width" multiplier="0.05" id="s2j-ic-hc7"/>
                                     <constraint firstItem="F9c-87-Eaf" firstAttribute="top" secondItem="eda-qs-Ysy" secondAttribute="bottom" constant="5" id="syY-Ry-qdf"/>
@@ -916,6 +922,7 @@
                                     <constraint firstItem="QWg-1e-IRK" firstAttribute="leading" secondItem="F9c-87-Eaf" secondAttribute="trailing" constant="8" symbolic="YES" id="xDT-G1-o4P"/>
                                     <constraint firstItem="zkv-Xq-T3I" firstAttribute="top" secondItem="KeE-Px-9Yd" secondAttribute="top" constant="10" id="xQX-Oo-bgI"/>
                                     <constraint firstItem="xY5-eA-YBn" firstAttribute="centerY" secondItem="CWG-iB-7J1" secondAttribute="centerY" id="xaH-aZ-e3L"/>
+                                    <constraint firstItem="Jr0-aw-YjK" firstAttribute="top" secondItem="CWG-iB-7J1" secondAttribute="top" id="z70-4m-RNy"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -929,6 +936,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomLbl" destination="F9c-87-Eaf" id="hUx-cS-dYv"/>
+                        <outlet property="fadeOutView" destination="Jr0-aw-YjK" id="9cS-EO-vrz"/>
                         <outlet property="previewBox" destination="KeE-Px-9Yd" id="Soh-tz-xJq"/>
                         <outlet property="replayBtn" destination="hoh-Pe-o3J" id="Tf3-I9-RN1"/>
                         <outlet property="replayLbl" destination="VP7-kd-DqB" id="dnx-sQ-dFU"/>
@@ -940,7 +948,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zip-YE-h93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5420" y="668"/>
+            <point key="canvasLocation" x="5417.3913043478269" y="667.63392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nyD-Bk-Pvd">

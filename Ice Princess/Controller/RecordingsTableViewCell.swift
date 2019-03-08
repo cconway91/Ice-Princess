@@ -38,6 +38,7 @@ class RecordingsTableViewCell: UITableViewCell, PauseVideoDelegate {
     
     //MARK: - Helpers
     func playVideos() {
+        progressView.progress = 0.00
         videoView.player?.seek(to: ResetTime.SeekTime)
         videoView.player?.play()
         silentVideoView.player?.seek(to: ResetTime.SeekTime)

@@ -75,7 +75,7 @@
         watermarkXPosition = 15;
         watermarkYPosition = 15;
         textWidth = 230;
-        textHeight = 150;
+        textHeight = 130;
         fontSize = 40;
         textXPosition = 170;
         textYPosition = 15;

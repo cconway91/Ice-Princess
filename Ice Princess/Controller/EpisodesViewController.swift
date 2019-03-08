@@ -1,12 +1,15 @@
 import UIKit
 
-class EpisodesViewController: UITableViewController {
+class EpisodesViewController: UITableViewController, EpisodesViewControllerDelegate {
     
     //MARK: - Constants
     private enum Settings: String {
         case CallVideo
     }
-    
+
+    //MARK: - Properties
+    var delegate: EpisodesViewControllerDelegate?
+
     //MARK: - Outlets
     @IBOutlet weak var episodeOneBtn: UIButton!
     @IBOutlet weak var episodeTwoBtn: UIButton!
@@ -27,7 +30,12 @@ class EpisodesViewController: UITableViewController {
         previewViewController.definesPresentationContext = true
         previewViewController.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
         previewViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        previewViewController.delegate = self
         self.present(previewViewController, animated: true, completion: nil)
+    }
+    
+    func updateCheckmark() {
+        updateUI()
     }
     
     private func updateUI() {
@@ -52,6 +60,7 @@ class EpisodesViewController: UITableViewController {
         episodeTwoBtn.setImage(nil, for: .normal)
         let defaults = UserDefaults.standard
         defaults.set("Introduction", forKey: Settings.CallVideo.rawValue)
+        delegate?.updateCheckmark()
     }
     
     @IBAction func episodeTwoBtnPressed(_ sender: Any) {
@@ -60,6 +69,7 @@ class EpisodesViewController: UITableViewController {
             episodeOneBtn.setImage(nil, for: .normal)
             episodeTwoBtn.setImage(UIImage(named: "CheckmarkLightYellow"), for: .normal)
             defaults.set("HappyBirthday", forKey: Settings.CallVideo.rawValue)
+            delegate?.updateCheckmark()
         } else {
             seguePreviewViewController("HappyBirthday")
         }

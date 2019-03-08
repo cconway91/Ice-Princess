@@ -2,7 +2,7 @@ import UIKit
 import StoreKit
 
 class PersonalizeViewController: UIViewController, SKProductsRequestDelegate, SKPaymentTransactionObserver {
-    
+
     //MARK: - Constants
     private enum Settings: String {
         case CallVideo

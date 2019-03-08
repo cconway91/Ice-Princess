@@ -1,5 +1,9 @@
 import AVFoundation
 
+protocol EpisodesViewControllerDelegate: class {
+    func updateCheckmark()
+}
+
 protocol PauseVideoDelegate: class {
     func pauseVideo()
 }

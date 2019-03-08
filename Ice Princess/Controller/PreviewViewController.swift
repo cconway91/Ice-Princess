@@ -17,6 +17,7 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
     }
     
     //MARK: - Properties
+    var delegate: EpisodesViewControllerDelegate?
     var list = [SKProduct]()
     var p = SKProduct()
     var player: AVPlayer!
@@ -242,5 +243,6 @@ class PreviewViewController: UIViewController, SKProductsRequestDelegate, SKPaym
         } else {
             buyEpisode()
         }
+        delegate?.updateCheckmark()
     }
 }

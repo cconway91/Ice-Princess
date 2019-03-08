@@ -1353,7 +1353,7 @@ and we NEVER collect data from you!</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1kn-nj-aF1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1kn-nj-aF1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1476,7 +1476,7 @@ and we NEVER collect data from you!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Recordings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkg-cM-bba">
-                                        <rect key="frame" x="130.66666666666666" y="362.66666666666669" width="152.99999999999997" height="29"/>
+                                        <rect key="frame" x="130.66666666666669" y="362.66666666666669" width="152.66666666666669" height="28.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="0.82739323379999996" green="0.83151024579999999" blue="0.8380221725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1488,15 +1488,63 @@ and we NEVER collect data from you!</string>
                                     <constraint firstItem="gkg-cM-bba" firstAttribute="centerY" secondItem="fZr-2h-2T6" secondAttribute="centerY" id="ARA-uc-GtE"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q45-rZ-u8A">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
+                                <subviews>
+                                    <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-OV-xzj" customClass="RoundView" customModule="Ice_Princess" customModuleProvider="target">
+                                        <rect key="frame" x="124.33333333333333" y="294.33333333333331" width="165.33333333333337" height="165.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rAv-aS-aG1">
+                                                <rect key="frame" x="0.0" y="41.333333333333378" width="165.33333333333334" height="82.666666666666686"/>
+                                                <subviews>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="OXS-tw-ExU">
+                                                        <rect key="frame" x="72.666666666666671" y="0.0" width="20" height="18.666666666666668"/>
+                                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </activityIndicatorView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="rRy-um-pcm">
+                                                        <rect key="frame" x="21.666666666666671" y="26.666666666666629" width="122.00000000000001" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="rRy-um-pcm" secondAttribute="height" multiplier="89:41" id="UyO-of-KZA"/>
+                                                        </constraints>
+                                                        <string key="text">Exporting Video
+Please Wait</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Z1X-OV-xzj" secondAttribute="height" multiplier="1:1" id="Dfh-cd-jlD"/>
+                                            <constraint firstItem="rAv-aS-aG1" firstAttribute="width" secondItem="Z1X-OV-xzj" secondAttribute="width" id="O8k-Qo-epT"/>
+                                            <constraint firstItem="rAv-aS-aG1" firstAttribute="centerX" secondItem="Z1X-OV-xzj" secondAttribute="centerX" id="iXg-UD-A9T"/>
+                                            <constraint firstItem="rAv-aS-aG1" firstAttribute="height" secondItem="Z1X-OV-xzj" secondAttribute="height" multiplier="0.5" id="qVX-cW-bPl"/>
+                                            <constraint firstItem="rAv-aS-aG1" firstAttribute="centerY" secondItem="Z1X-OV-xzj" secondAttribute="centerY" id="sWW-pE-4Yr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Z1X-OV-xzj" firstAttribute="centerX" secondItem="Q45-rZ-u8A" secondAttribute="centerX" id="Peb-12-uu6"/>
+                                    <constraint firstItem="Z1X-OV-xzj" firstAttribute="width" secondItem="Q45-rZ-u8A" secondAttribute="width" multiplier="0.4" id="khH-kE-E62"/>
+                                    <constraint firstItem="Z1X-OV-xzj" firstAttribute="centerY" secondItem="Q45-rZ-u8A" secondAttribute="centerY" id="lbU-H5-dSz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Q45-rZ-u8A" firstAttribute="leading" secondItem="k1t-aD-6Fn" secondAttribute="leading" id="9gZ-Qs-Pzk"/>
                             <constraint firstItem="k1t-aD-6Fn" firstAttribute="trailing" secondItem="fZr-2h-2T6" secondAttribute="trailing" id="DsM-6W-Kfg"/>
                             <constraint firstItem="1kn-nj-aF1" firstAttribute="trailing" secondItem="k1t-aD-6Fn" secondAttribute="trailing" id="E53-h0-Dbr"/>
+                            <constraint firstItem="Q45-rZ-u8A" firstAttribute="top" secondItem="SD8-w5-Fk1" secondAttribute="top" id="Ksy-E8-X66"/>
                             <constraint firstItem="fZr-2h-2T6" firstAttribute="leading" secondItem="k1t-aD-6Fn" secondAttribute="leading" id="MGN-qv-QB7"/>
+                            <constraint firstItem="Q45-rZ-u8A" firstAttribute="trailing" secondItem="k1t-aD-6Fn" secondAttribute="trailing" id="Wrk-H7-k9Z"/>
                             <constraint firstAttribute="bottom" secondItem="1kn-nj-aF1" secondAttribute="bottom" id="XeB-hT-dX2"/>
                             <constraint firstItem="1kn-nj-aF1" firstAttribute="leading" secondItem="k1t-aD-6Fn" secondAttribute="leading" id="eM0-IG-PTj"/>
                             <constraint firstItem="fZr-2h-2T6" firstAttribute="top" secondItem="SD8-w5-Fk1" secondAttribute="top" id="gEH-gI-zCw"/>
+                            <constraint firstAttribute="bottom" secondItem="Q45-rZ-u8A" secondAttribute="bottom" id="p5Q-wY-Ex0"/>
                             <constraint firstAttribute="bottom" secondItem="fZr-2h-2T6" secondAttribute="bottom" id="peR-d2-2yg"/>
                             <constraint firstItem="1kn-nj-aF1" firstAttribute="top" secondItem="SD8-w5-Fk1" secondAttribute="top" id="veu-VO-zKd"/>
                         </constraints>
@@ -1504,12 +1552,14 @@ and we NEVER collect data from you!</string>
                     </view>
                     <connections>
                         <outlet property="noRecordingsView" destination="fZr-2h-2T6" id="1sM-op-e0t"/>
+                        <outlet property="renderingActivityIndicator" destination="OXS-tw-ExU" id="UDf-hK-vQ1"/>
+                        <outlet property="renderingView" destination="Q45-rZ-u8A" id="Fun-D9-oX4"/>
                         <outlet property="tableView" destination="1kn-nj-aF1" id="o9n-hH-IqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ND-XT-nUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2675" y="-38"/>
+            <point key="canvasLocation" x="2673.913043478261" y="-38.169642857142854"/>
         </scene>
     </scenes>
     <resources>

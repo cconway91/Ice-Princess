@@ -22,6 +22,8 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noRecordingsView: UIView!
+    @IBOutlet weak var renderingView: UIView!
+    @IBOutlet weak var renderingActivityIndicator: UIActivityIndicatorView!
     
     //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
@@ -191,8 +193,8 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 print("Ooops! Something went wrong: \(error)")
             }
             if let indexPath = self.tableView.indexPath(for: senderCell) {
-                self.urls.remove(at: indexPath.row)
                 self.tableView.beginUpdates()
+                self.urls.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 self.tableView.endUpdates()
                 self.checkNoRecordingsView()
@@ -231,6 +233,9 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
                                                           secondUrl: silentUrl,
                                                           isPortraitMode: verticalSelected,
                                                           exportedFilename: "overlapVideo.mov")
+        renderingView.isHidden = false
+        renderingActivityIndicator.startAnimating()
+        
         exporter?.exportAsynchronously {
             DispatchQueue.main.async {
                 let activityVC = UIActivityViewController(activityItems: [exporter?.outputURL ?? self.shareVideoURL as Any], applicationActivities: nil)
@@ -241,6 +246,8 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
                     }
                 }
                 activityVC.popoverPresentationController?.sourceView = self.view
+                self.renderingView.isHidden = true
+                self.renderingActivityIndicator.stopAnimating()
                 self.present(activityVC, animated: true, completion: nil)
             }
         }

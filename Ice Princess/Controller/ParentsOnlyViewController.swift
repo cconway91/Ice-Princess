@@ -9,7 +9,6 @@ class ParentsOnlyViewController: UIViewController, SegueHandler {
     
     //MARK: - Properties
     weak var delegate: PauseVideoDelegate?
-    
     //MARK: - Outlets
     @IBOutlet weak var personalizeView: UIView!
     @IBOutlet weak var segmentControl: CustomSegmentedControl!
@@ -27,6 +26,11 @@ class ParentsOnlyViewController: UIViewController, SegueHandler {
         if segue.identifier == Storyboard.ShowSettingsSegueIdentifier {
             let dvc = segue.destination as! SettingsViewController
             dvc.delegate = self
+        }
+        
+        if let vc = segue.destination as? RecordingsViewController
+        {
+            self.delegate = vc
         }
     }
     

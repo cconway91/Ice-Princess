@@ -3,7 +3,7 @@ import AVKit
 import AVFoundation
 import Photos
 
-class RecordingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching, RecordingsTableViewCellDelegate, ShareViewControllerDelegate {
+class RecordingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching, RecordingsTableViewCellDelegate, ShareViewControllerDelegate, PauseVideoDelegate {
     
     //MARK: - Constants
     private struct Storyboard {
@@ -11,7 +11,7 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     //MARK: - Properties
-    weak var delegate: PauseVideoDelegate?
+    
     var cells: [Int: RecordingsTableViewCell] = [:]
     var shareVideoName: String!
     var shareVideoURL: URL!
@@ -32,9 +32,17 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
         updateUI()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        for cell in self.cells {
+            cell.value.pauseVideo()
+        }
+    }
+    
+    func pauseVideo() {
+        for cell in self.cells {
+            cell.value.pauseVideo()
+        }
     }
     
     //MARK: - Helpers
@@ -160,6 +168,7 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
         } else {
             cell = self.cells[indexPath.row]!
         }
+        
         return cell
     }
     
@@ -193,10 +202,10 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 print("Ooops! Something went wrong: \(error)")
             }
             if let indexPath = self.tableView.indexPath(for: senderCell) {
-//                self.tableView.beginUpdates()
+                //                self.tableView.beginUpdates()
                 self.urls.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
-//                self.tableView.endUpdates()
+                //                self.tableView.endUpdates()
                 self.tableView.reloadData()
                 self.checkNoRecordingsView()
             }

@@ -104,6 +104,7 @@ class RecordingsTableViewCell: UITableViewCell, PauseVideoDelegate {
     }
     
     @IBAction func playBtnPressed(_ sender: Any) {
+        self.delegate?.playVideoTapped(senderCell: self)
         if isPlaying {
             isPlaying = false
             stopVideos()

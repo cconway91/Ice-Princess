@@ -1503,14 +1503,14 @@ and we NEVER collect data from you!</string>
                                         <rect key="frame" x="124.33333333333333" y="294.33333333333331" width="165.33333333333337" height="165.33333333333331"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rAv-aS-aG1">
-                                                <rect key="frame" x="0.0" y="41.333333333333378" width="165.33333333333334" height="82.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="24.666666666666679" width="165.33333333333334" height="99.333333333333314"/>
                                                 <subviews>
                                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="OXS-tw-ExU">
-                                                        <rect key="frame" x="72.666666666666671" y="0.0" width="20" height="18.666666666666668"/>
+                                                        <rect key="frame" x="72.666666666666671" y="0.0" width="20" height="20"/>
                                                         <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </activityIndicatorView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="rRy-um-pcm">
-                                                        <rect key="frame" x="21.666666666666671" y="26.666666666666629" width="122.00000000000001" height="56"/>
+                                                        <rect key="frame" x="5.3333333333333286" y="28" width="154.66666666666669" height="71.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="rRy-um-pcm" secondAttribute="height" multiplier="89:41" id="UyO-of-KZA"/>
                                                         </constraints>
@@ -1522,14 +1522,23 @@ Please Wait</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="c0W-Np-25Q">
+                                                <rect key="frame" x="70.666666666666671" y="123.99999999999999" width="24.333333333333329" height="26.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Z1X-OV-xzj" secondAttribute="height" multiplier="1:1" id="Dfh-cd-jlD"/>
+                                            <constraint firstItem="c0W-Np-25Q" firstAttribute="top" secondItem="rAv-aS-aG1" secondAttribute="bottom" id="FqL-2x-cae"/>
+                                            <constraint firstAttribute="bottom" secondItem="c0W-Np-25Q" secondAttribute="bottom" multiplier="1.1" id="Mbl-eI-tXj"/>
                                             <constraint firstItem="rAv-aS-aG1" firstAttribute="width" secondItem="Z1X-OV-xzj" secondAttribute="width" id="O8k-Qo-epT"/>
+                                            <constraint firstItem="c0W-Np-25Q" firstAttribute="centerX" secondItem="Z1X-OV-xzj" secondAttribute="centerX" id="P3L-oa-wCx"/>
                                             <constraint firstItem="rAv-aS-aG1" firstAttribute="centerX" secondItem="Z1X-OV-xzj" secondAttribute="centerX" id="iXg-UD-A9T"/>
-                                            <constraint firstItem="rAv-aS-aG1" firstAttribute="height" secondItem="Z1X-OV-xzj" secondAttribute="height" multiplier="0.5" id="qVX-cW-bPl"/>
-                                            <constraint firstItem="rAv-aS-aG1" firstAttribute="centerY" secondItem="Z1X-OV-xzj" secondAttribute="centerY" id="sWW-pE-4Yr"/>
+                                            <constraint firstItem="rAv-aS-aG1" firstAttribute="height" secondItem="Z1X-OV-xzj" secondAttribute="height" multiplier="0.6" id="qVX-cW-bPl"/>
+                                            <constraint firstItem="rAv-aS-aG1" firstAttribute="centerY" secondItem="Z1X-OV-xzj" secondAttribute="centerY" multiplier="0.9" id="sWW-pE-4Yr"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1560,6 +1569,7 @@ Please Wait</string>
                     </view>
                     <connections>
                         <outlet property="noRecordingsView" destination="fZr-2h-2T6" id="1sM-op-e0t"/>
+                        <outlet property="progressLbl" destination="c0W-Np-25Q" id="lys-3C-Brt"/>
                         <outlet property="renderingActivityIndicator" destination="OXS-tw-ExU" id="UDf-hK-vQ1"/>
                         <outlet property="renderingView" destination="Q45-rZ-u8A" id="Fun-D9-oX4"/>
                         <outlet property="tableView" destination="1kn-nj-aF1" id="o9n-hH-IqP"/>

@@ -11,6 +11,7 @@ protocol PauseVideoDelegate: class {
 protocol RecordingsTableViewCellDelegate: class {
     func shareVideo(senderCell: RecordingsTableViewCell, videoURL: URL, videoName: String)
     func deleteVideo(senderCell: RecordingsTableViewCell, videoURL: URL)
+    func playVideoTapped(senderCell: RecordingsTableViewCell)
 }
 
 protocol SegueHandler: class {
@@ -21,4 +22,10 @@ protocol ShareViewControllerDelegate: class {
     func verticalVideoSelected()
     func squareVideoSelected()
     func shareBtnAction()
+}
+
+extension RecordingsTableViewCellDelegate
+{
+    func playVideoTapped(senderCell: RecordingsTableViewCell)
+    {}
 }

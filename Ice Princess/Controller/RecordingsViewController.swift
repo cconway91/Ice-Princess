@@ -18,12 +18,14 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
     var tasks = [URLSessionTask]()
     var urls: [URL] = []
     var verticalSelected = true
+    var selectedPlayer : RecordingsTableViewCell?
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noRecordingsView: UIView!
     @IBOutlet weak var renderingView: UIView!
     @IBOutlet weak var renderingActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var progressLbl: UILabel!
     
     //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
@@ -97,12 +99,20 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
         checkNoRecordingsView()
     }
     
+    func resetVideos()
+    {
+        self.cells = [:]
+        self.tasks = [URLSessionTask]()
+        self.selectedPlayer = nil
+        self.updateUI()
+    }
+    
     func cancelPrefetchVideo(forItemAtIndex index: Int) {
         let url = self.urls[index]
         guard let taskIndex = tasks.index(where: { $0.originalRequest?.url == url }) else {
             return
         }
-        self.cells[index] = nil
+        //        self.cells[index] = nil
         let task = tasks[taskIndex]
         task.cancel()
         tasks.remove(at: taskIndex)
@@ -163,12 +173,13 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: - Table View Data Source
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = self.tableView.dequeueReusableCell(withIdentifier: Storyboard.CellIdentifier) as! RecordingsTableViewCell
+        //self.cells.index(forKey: indexPath.row) == nil
         if self.cells.index(forKey: indexPath.row) == nil {
             self.prefetchVideo(forItemAtIndex: indexPath.row)
         } else {
             cell = self.cells[indexPath.row]!
         }
-        
+        cell.playBtn.tag = indexPath.row
         return cell
     }
     
@@ -197,17 +208,26 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
             let fileManager = FileManager.default
             do {
                 try fileManager.removeItem(at: videoURL)
+                //StopPlayer If Selected Video is playing
+                if self.selectedPlayer != nil
+                {
+                    self.selectedPlayer?.pauseVideo()
+                }
+                
+                //DeleteVideo From Here
+                /*    if let index = self.cells.index(forKey: senderCell.playBtn.tag)
+                 {
+                 self.cells.remove(at: index)
+                 }
+                 self.cancelPrefetchVideo(forItemAtIndex: senderCell.playBtn.tag)
+                 
+                 self.urls.remove(at: senderCell.playBtn.tag)
+                 self.tableView.reloadData()
+                 self.checkNoRecordingsView()*/
+                self.resetVideos()
             }
             catch let error as NSError {
                 print("Ooops! Something went wrong: \(error)")
-            }
-            if let indexPath = self.tableView.indexPath(for: senderCell) {
-                //                self.tableView.beginUpdates()
-                self.urls.remove(at: indexPath.row)
-                self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                //                self.tableView.endUpdates()
-                self.tableView.reloadData()
-                self.checkNoRecordingsView()
             }
         }))
         self.present(alert, animated: true, completion: nil)
@@ -226,6 +246,18 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
         shareSegue.delegate = self
         self.present(shareSegue, animated: true, completion: nil)
     }
+    
+    func playVideoTapped(senderCell: RecordingsTableViewCell) {
+        if self.selectedPlayer != nil
+        {
+            if self.selectedPlayer?.playBtn.tag != senderCell.playBtn.tag
+            {
+                self.selectedPlayer?.pauseVideo()
+            }
+        }
+        self.selectedPlayer = senderCell
+    }
+    
     
     //MARK: - ShareViewControllerDelegate
     func verticalVideoSelected() {
@@ -246,8 +278,14 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
         renderingView.isHidden = false
         renderingActivityIndicator.startAnimating()
         
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
+            let progress = Int((exporter?.progress ?? 0) * 100)
+            self.progressLbl.text = "\(progress)%"
+        }
+        
         exporter?.exportAsynchronously {
             DispatchQueue.main.async {
+                timer.invalidate()
                 let activityVC = UIActivityViewController(activityItems: [exporter?.outputURL ?? self.shareVideoURL as Any], applicationActivities: nil)
                 activityVC.completionWithItemsHandler = { (activityType, completed:Bool, returnedItems:[Any]?, error: Error?) in
                     if completed {
@@ -261,5 +299,8 @@ class RecordingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.present(activityVC, animated: true, completion: nil)
             }
         }
+        
+        
+        
     }
 }
